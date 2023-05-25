@@ -19,7 +19,7 @@ export default function PresentingBlock() {
       <LeftGrid item md={6}>
         <div>
           <Name>
-            I'M <span>Abd El-aziz Noaman</span>
+            I&lsquo;M <span>Abd El-aziz Noaman</span>
           </Name>
           <Title>Web Developer</Title>
           <ContactMeBtn variant="outlined" size="large">
