@@ -55,22 +55,11 @@ export const ThemeContextProvider = (props) => {
   //   prefersDarkMode
   // );
 
-  const intialMode =
-    // ? "dark"
-    localStorage.getItem("mode") || "dark";
+  const intialMode = localStorage.getItem("mode") || "dark";
 
   const [mode, setMode] = useState(intialMode);
 
   const toggleModeHandler = () => {
-    // setMode((prevState) => {
-    //   if (prevState === "dark") {
-    //     localStorage.setItem("mode", "light");
-    //     return "light";
-    //   } else {
-    //     localStorage.setItem("mode", "dark");
-    //     return "dark";
-    //   }
-    // });
     if (mode === "dark") {
       localStorage.setItem("mode", "light");
       setMode("light");
