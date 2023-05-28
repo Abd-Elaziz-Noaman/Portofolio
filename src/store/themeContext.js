@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "styled-components";
 import { ThemeProvider as MuiThemeProvider } from "@mui/material/styles";
@@ -55,11 +55,13 @@ export const ThemeContextProvider = (props) => {
   //   prefersDarkMode
   // );
 
-  if (typeof window !== "undefined") {
-    const intialMode = localStorage.getItem("mode") || "dark";
-  }
+  // let intialMode = "";
 
-  const [mode, setMode] = useState(intialMode);
+  // useEffect(() => {
+  //   intialMode = localStorage.getItem("mode") || "dark";
+  // }, []);
+
+  const [mode, setMode] = useState(localStorage.getItem("mode") || "dark");
 
   const toggleModeHandler = () => {
     if (mode === "dark") {
