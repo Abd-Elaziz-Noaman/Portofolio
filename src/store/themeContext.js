@@ -55,7 +55,16 @@ export const ThemeContextProvider = (props) => {
   //   prefersDarkMode
   // );
 
-  const intialMode = localStorage.getItem("mode") || "dark";
+  let intialMode = "dark";
+  try {
+    if (typeof window !== "undefined") {
+      intialMode = window.localStorage.getItem("mode") || "dark";
+      console.log("All Works fine!");
+    }
+  } catch (err) {
+    console.log("localStorage is not available.");
+  }
+
   console.log(
     "🚀 ~ file: themeContext.js:59 ~ ThemeContextProvider ~ intialMode:",
     intialMode
@@ -65,10 +74,22 @@ export const ThemeContextProvider = (props) => {
 
   const toggleModeHandler = () => {
     if (mode === "dark") {
-      localStorage.setItem("mode", "light");
+      try {
+        if (typeof window !== "undefined") {
+          window.localStorage.setItem("mode", "light");
+        }
+      } catch (err) {
+        console.log("localStorage is not available.");
+      }
       setMode("light");
     } else {
-      localStorage.setItem("mode", "dark");
+      try {
+        if (typeof window !== "undefined") {
+          window.localStorage.setItem("mode", "dark");
+        }
+      } catch (err) {
+        console.log("localStorage is notavailable.");
+      }
       setMode("dark");
     }
   };
