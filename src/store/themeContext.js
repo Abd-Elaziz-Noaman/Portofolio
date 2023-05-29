@@ -55,7 +55,7 @@ export const ThemeContextProvider = (props) => {
   //   prefersDarkMode
   // );
 
-  const intialMode = window.localStorage.getItem("mode") || "dark";
+  const intialMode = localStorage.getItem("mode") || "dark";
   console.log(
     "🚀 ~ file: themeContext.js:59 ~ ThemeContextProvider ~ intialMode:",
     intialMode
@@ -65,10 +65,10 @@ export const ThemeContextProvider = (props) => {
 
   const toggleModeHandler = () => {
     if (mode === "dark") {
-      window.localStorage.setItem("mode", "light");
+      localStorage.setItem("mode", "light");
       setMode("light");
     } else {
-      window.localStorage.setItem("mode", "dark");
+      localStorage.setItem("mode", "dark");
       setMode("dark");
     }
   };
