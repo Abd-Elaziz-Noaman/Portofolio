@@ -5,6 +5,7 @@ import { useTheme } from "@mui/material";
 import { MainBlock } from "./MainContainer.styled";
 import PresentingBlock from "../PresentingBlock/PresentingBlock";
 import About from "../About/About";
+import ProjectsBlock from "../ProjectsBlock/ProjectsBlock";
 
 export default function MainContainer() {
   const theme = useTheme();
@@ -15,6 +16,7 @@ export default function MainContainer() {
       <Navigator />
       <PresentingBlock />
       <About />
+      <ProjectsBlock />
     </MainBlock>
   );
 }
