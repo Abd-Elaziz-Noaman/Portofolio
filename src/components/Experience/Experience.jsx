@@ -9,7 +9,7 @@ import { StepperContainer } from "./Experience.styled";
 //   "Create an ad group",
 //   "Create an ad",
 // ];
-const steps = [
+let steps = [
   {
     year: 2021,
     label: "Front-end Developer",
@@ -41,6 +41,8 @@ const steps = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam neque nunc, euismod vitae sagittis ut, efficitur eu lacus. Donec gravida at diam quis fringilla. Nam pretium dapibus pellentesque. Morbi vulputate purus ultrices sem posuere posuere. Maecenas risus arcu, elementum et dignissim in, vestibulum ut nisl. Integer suscipit metus a egestas sagittis. Vestibulum non urna ac eros euismod varius eu et augue.",
   },
 ];
+
+steps = [...steps].reverse();
 
 export default function Experience() {
   return (

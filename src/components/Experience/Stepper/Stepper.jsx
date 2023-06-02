@@ -11,7 +11,7 @@ import {
 export default function Stepper({ steps }) {
   return (
     <>
-      {steps.reverse().map((step, index) => (
+      {steps.map((step, index) => (
         <div key={index}>
           <LabelContainer container spacing={2} alignItems="center">
             <Grid item md={3}>
