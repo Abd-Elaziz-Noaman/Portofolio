@@ -9,6 +9,7 @@ import About from "../About/About";
 import ProjectsBlock from "../ProjectsBlock/ProjectsBlock";
 import Experience from "../Experience/Experience";
 import ScrollToTopBtn from "./ScrollToTopBtn/ScrollToTopBtn";
+import Contact from "../Contact/Contact";
 
 export default function MainContainer() {
   const theme = useTheme();
@@ -32,6 +33,7 @@ export default function MainContainer() {
       <About />
       <ProjectsBlock />
       <Experience />
+      <Contact />
       <ScrollToTopBtn />
       {/* <Zoom in={trigger}>
         <Fab
