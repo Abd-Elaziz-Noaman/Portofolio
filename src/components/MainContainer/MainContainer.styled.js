@@ -1,7 +1,5 @@
 import styled from "styled-components";
-// import { useTheme } from "@material-ui/core/styles";
-
-// const theme = useTheme();
+import { Button } from "@mui/material";
 
 export const MainBlock = styled.div`
   height: 100%;
@@ -13,6 +11,6 @@ export const MainBlock = styled.div`
       : theme.palette.primary.dark};
 `;
 
-// theme.palette.mode == "light"
-//           ? theme.palette.primary.dark
-//           : theme.palette.primary.light
+export const ScrollToTopBtn = styled(Button)`
+  
+`

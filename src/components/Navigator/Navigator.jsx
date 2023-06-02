@@ -21,7 +21,7 @@ import NightsStayIcon from "@mui/icons-material/NightsStay";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import NightlightIcon from "@mui/icons-material/Nightlight";
 import Image from "next/image";
-import Logo from "../../images/code-logo.png";
+import Logo from "../../images/code-logo.webp";
 import ThemeContext from "../../store/themeContext";
 import {
   ModeIconContainer,
@@ -31,7 +31,7 @@ import {
   NavButtonsContainer,
 } from "./Navigator.styled";
 
-const pages = ["Products", "Pricing", "Blog"];
+const pages = ["Home", "About", "Projects"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 export default function Navigator() {
@@ -48,8 +48,10 @@ export default function Navigator() {
     setAnchorElUser(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
+  const handleCloseNavMenu = (blockId) => {
+    // setAnchorElNav(null);
+    const targetDiv = document.getElementById(blockId);
+    targetDiv.scrollIntoView({ behavior: "smooth" });
   };
 
   const handleCloseUserMenu = () => {
@@ -121,7 +123,7 @@ export default function Navigator() {
               {pages.map((page) => (
                 <StyledMenuItem
                   key={page}
-                  onClick={handleCloseNavMenu}
+                  onClick={() => handleCloseNavMenu(page)}
                   // sx={{ color: "black" }}
                 >
                   <Typography textAlign="center">{page}</Typography>
@@ -153,7 +155,7 @@ export default function Navigator() {
             {pages.map((page) => (
               <StyledButton
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={() => handleCloseNavMenu(page)}
                 sx={{ my: 2, display: "block" }}
                 theme={theme}
               >

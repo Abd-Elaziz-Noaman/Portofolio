@@ -2,7 +2,7 @@ import React from "react";
 import { Grid } from "@mui/material";
 import Image from "next/image";
 
-import MyPic from "../../images/my-pic.png";
+import MyPic from "../../images/my-pic.webp";
 
 import {
   BlockContainer,

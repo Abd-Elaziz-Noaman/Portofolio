@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Typography, Grid } from "@mui/material";
 
-import ProjectsPic from "../../images/projects/projects.jpg";
-import { ProjectContainer, StyledImage } from "./ProjectsBlock.styled";
+import ProjectsPic from "../../images/projects/projects2.webp";
+import {
+  ProjectContainer,
+  AboveLayer,
+  StyledImage,
+} from "./ProjectsBlock.styled";
 import { Container } from "../About/About.styled";
 
 export default function ProjectsBlock() {
   return (
-    <Container>
+    <Container id="Projects">
       <Typography
         variant="h2"
         component="h2"
@@ -17,17 +21,87 @@ export default function ProjectsBlock() {
       >
         Projects
       </Typography>
-      <Grid container spacing={2} justifyContent="space-between">
+      <Grid container spacing={0}>
         <ProjectContainer item md={4}>
-          <StyledImage alt="projects-pic" src={ProjectsPic} layout="fill" />
+          <StyledImage
+            alt="projects-pic"
+            src={ProjectsPic}
+            // layout="fill"
+            // height={350}
+            // width={350}
+          />
+
+          <AboveLayer>
+            <p>My Layer Text</p>
+          </AboveLayer>
         </ProjectContainer>
         <ProjectContainer item md={4}>
-          <StyledImage alt="projects-pic" src={ProjectsPic} layout="fill" />
+          <StyledImage
+            alt="projects-pic"
+            src={ProjectsPic}
+            // layout="fill"
+            height={350}
+            width={350}
+          />
+          <AboveLayer>
+            <p>My Layer Text</p>
+          </AboveLayer>
         </ProjectContainer>
         <ProjectContainer item md={4}>
-          <StyledImage alt="projects-pic" src={ProjectsPic} layout="fill" />
+          <StyledImage
+            alt="projects-pic"
+            src={ProjectsPic}
+            // layout="fill"
+            height={350}
+            width={350}
+          />
+          <AboveLayer>
+            <p>My Layer Text</p>
+          </AboveLayer>
         </ProjectContainer>
       </Grid>
+      <br />
+      <Grid container spacing={0}>
+        <ProjectContainer item md={4} xs={12}>
+          <StyledImage
+            alt="projects-pic"
+            src={ProjectsPic}
+            // layout="fill"
+            height={350}
+            width={350}
+          />
+
+          <AboveLayer>
+            <p>My Layer Text</p>
+          </AboveLayer>
+        </ProjectContainer>
+        <ProjectContainer item md={4} xs={12}>
+          <StyledImage
+            alt="projects-pic"
+            src={ProjectsPic}
+            // layout="fill"
+            height={350}
+            width={350}
+          />
+          <AboveLayer>
+            <p>My Layer Text</p>
+          </AboveLayer>
+        </ProjectContainer>
+        <ProjectContainer item md={4} xs={12}>
+          <StyledImage
+            alt="projects-pic"
+            src={ProjectsPic}
+            // layout="fill"
+            height={350}
+            width={350}
+          />
+          <AboveLayer>
+            <p>My Layer Text</p>
+          </AboveLayer>
+        </ProjectContainer>
+      </Grid>
+      <br />
+      <br />
       <br />
     </Container>
   );

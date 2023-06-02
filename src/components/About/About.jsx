@@ -4,17 +4,17 @@ import { Typography, Grid } from "@mui/material";
 import { Container } from "./About.styled";
 import Skill from "./Skill/Skill";
 
-import HtmlCss from "../../images/skills/html-css.png";
-import JavaScript from "../../images/skills/javascript.svg.png";
-import ReactJs from "../../images/skills/reactjs.png";
-import Bootstrap from "../../images/skills/bootstrap.png";
-import MaterialUI from "../../images/skills/material-ui.png";
-import AntD from "../../images/skills/antd.png";
-import StyledComponents from "../../images/skills/styled-components.png";
-import Redux from "../../images/skills/redux.png";
-import ReactNative from "../../images/skills/react-native.png";
-import Git from "../../images/skills/git.png";
-import NextJs from "../../images/skills/nextjs.png";
+import HtmlCss from "../../images/skills/html-css.webp";
+import JavaScript from "../../images/skills/javascript.svg.webp";
+import ReactJs from "../../images/skills/reactjs.webp";
+import Bootstrap from "../../images/skills/bootstrap.webp";
+import MaterialUI from "../../images/skills/material-ui.webp";
+import AntD from "../../images/skills/antd.webp";
+import StyledComponents from "../../images/skills/styled-components.webp";
+import Redux from "../../images/skills/redux.webp";
+import ReactNative from "../../images/skills/react-native.webp";
+import Git from "../../images/skills/git.webp";
+import NextJs from "../../images/skills/nextjs.webp";
 import GridDrawer from "./GridDrawer/GridDrawer";
 
 const SkillsGrid_1 = [
@@ -39,7 +39,7 @@ const SkillsGrid_3 = [
 
 export default function About() {
   return (
-    <Container>
+    <Container id="About">
       <Typography
         variant="h2"
         component="h2"
