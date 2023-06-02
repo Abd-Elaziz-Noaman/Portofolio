@@ -31,7 +31,7 @@ import {
   NavButtonsContainer,
 } from "./Navigator.styled";
 
-const pages = ["Home", "About", "Projects"];
+const pages = ["Home", "About", "Projects", "Experience", "Contact"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 export default function Navigator() {
@@ -58,7 +58,7 @@ export default function Navigator() {
     setAnchorElUser(null);
   };
   return (
-    <StyledAppBar position="sticky" theme={theme}>
+    <StyledAppBar position="fixed" theme={theme}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Image

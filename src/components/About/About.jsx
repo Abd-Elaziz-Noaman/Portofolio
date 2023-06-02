@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography, Grid } from "@mui/material";
 
-import { Container } from "./About.styled";
+import { Container, StyledTypography } from "./About.styled";
 import Skill from "./Skill/Skill";
 
 import HtmlCss from "../../images/skills/html-css.webp";
@@ -40,7 +40,7 @@ const SkillsGrid_3 = [
 export default function About() {
   return (
     <Container id="About">
-      <Typography
+      <StyledTypography
         variant="h2"
         component="h2"
         mt={2}
@@ -48,11 +48,11 @@ export default function About() {
         sx={{ fontWeight: "500" }}
       >
         About
-      </Typography>
+      </StyledTypography>
       <Grid container spacing={1}>
         <Grid item md={1} sx={{ borderTop: "4px solid #ffc86b" }}></Grid>
         <Grid item md={11}>
-          <Typography variant="h6" component="p" mt={-3}>
+          <StyledTypography variant="h6" component="p" mt={-3}>
             I am a web developer with an amazing ability to develop websites
             that are both functional and aesthetically pleasing. I have a strong
             understanding of web standards and best practices, and I am
@@ -66,11 +66,11 @@ export default function About() {
             on time and within budget. I am a team player who is always willing
             to lend a helping hand, and I am confident in my ability to
             contribute to any project.
-          </Typography>
+          </StyledTypography>
         </Grid>
       </Grid>
 
-      <Typography
+      <StyledTypography
         variant="h2"
         component="h2"
         align="center"
@@ -78,7 +78,7 @@ export default function About() {
         sx={{ fontWeight: "500" }}
       >
         My Skills
-      </Typography>
+      </StyledTypography>
       <GridDrawer
         content={SkillsGrid_1}
         spacing={2}

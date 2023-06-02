@@ -4,6 +4,7 @@ import { Grid, Button } from "@mui/material";
 export const BlockContainer = styled(Grid)`
   height: 100%;
   min-height: 92.2vh;
+  margin-top: 5vh;
 `;
 
 export const LeftGrid = styled(Grid)`

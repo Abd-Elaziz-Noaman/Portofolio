@@ -7,12 +7,13 @@ import {
   AboveLayer,
   StyledImage,
 } from "./ProjectsBlock.styled";
+import { StyledTypography } from "../About/About.styled";
 import { Container } from "../About/About.styled";
 
 export default function ProjectsBlock() {
   return (
     <Container id="Projects">
-      <Typography
+      <StyledTypography
         variant="h2"
         component="h2"
         align="center"
@@ -20,7 +21,7 @@ export default function ProjectsBlock() {
         sx={{ fontWeight: "500" }}
       >
         Projects
-      </Typography>
+      </StyledTypography>
       <Grid container spacing={0}>
         <ProjectContainer item md={4}>
           <StyledImage

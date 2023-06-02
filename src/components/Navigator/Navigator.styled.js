@@ -20,6 +20,7 @@ export const ModeIconContainer = styled(Box)`
 
 export const StyledAppBar = styled(AppBar)`
   &.MuiPaper-root {
+    height: 9vh;
     background-color: ${({ theme }) =>
       theme.palette.mode == "light"
         ? theme.palette.primary.light

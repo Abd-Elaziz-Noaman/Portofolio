@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import Stepper from "./Stepper/Stepper";
 import { StepperContainer } from "./Experience.styled";
+import { StyledTypography } from "../About/About.styled";
 // import { Box, Stepper, Step, StepLabel } from "@mui/material";
 
 // const steps = [
@@ -46,8 +47,8 @@ steps = [...steps].reverse();
 
 export default function Experience() {
   return (
-    <Box sx={{ width: "80%", margin: "auto" }}>
-      <Typography
+    <Box id="Experience" sx={{ width: "80%", margin: "auto" }}>
+      <StyledTypography
         variant="h2"
         component="h2"
         mt={2}
@@ -55,7 +56,7 @@ export default function Experience() {
         sx={{ fontWeight: "500" }}
       >
         Experience
-      </Typography>
+      </StyledTypography>
       <StepperContainer>
         <Stepper steps={steps} />
       </StepperContainer>

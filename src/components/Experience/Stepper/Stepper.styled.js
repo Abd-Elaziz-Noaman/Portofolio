@@ -73,6 +73,10 @@ export const Label = styled.h2`
   white-space: nowrap;
   padding-left: 1rem;
   letter-spacing: 0.8px;
+  color: ${({ theme }) =>
+    theme.palette.mode == "light"
+      ? theme.palette.primary.dark
+      : theme.palette.primary.light};
 `;
 
 export const DescriptionsContainer = styled.div`
@@ -87,4 +91,8 @@ export const DescriptionsContainer = styled.div`
       theme.palette.mode == "light"
         ? theme.palette.secondary.dark
         : theme.palette.secondary.light};
+  color: ${({ theme }) =>
+    theme.palette.mode == "light"
+      ? theme.palette.primary.dark
+      : theme.palette.primary.light};
 `;
