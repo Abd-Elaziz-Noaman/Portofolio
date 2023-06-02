@@ -102,7 +102,6 @@ export default function ProjectsBlock() {
       </Grid>
       <br />
       <br />
-      <br />
     </Container>
   );
 }

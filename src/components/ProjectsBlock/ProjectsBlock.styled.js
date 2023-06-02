@@ -6,6 +6,7 @@ export const ProjectContainer = styled(Grid)`
   position: relative;
   height: 350px;
   width: 200px;
+  cursor: pointer;
   /* z-index: -1; */
   /* transition: all 0.5s ease-in-out; */
 `;
@@ -21,7 +22,6 @@ export const AboveLayer = styled(Box)`
   color: #fff;
   margin-top: 350px;
   transition: all 0.7s ease;
-  cursor: pointer;
 
   ${ProjectContainer}:hover & {
     visibility: visible;
