@@ -7,8 +7,15 @@ export const ProjectContainer = styled(Grid)`
   height: 350px;
   width: 200px;
   cursor: pointer;
-  /* z-index: -1; */
-  /* transition: all 0.5s ease-in-out; */
+
+  @media (max-width: 768px) {
+    height: 250px;
+  }
+
+  @media (max-width: 600px) {
+    height: 400px;
+    margin-bottom: 1.4rem;
+  }
 `;
 
 export const AboveLayer = styled(Box)`
@@ -22,6 +29,18 @@ export const AboveLayer = styled(Box)`
   color: #fff;
   margin-top: 350px;
   transition: all 0.7s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    margin-top: 250px;
+  }
+
+  @media (max-width: 600px) {
+    margin-top: 400px;
+  }
 
   ${ProjectContainer}:hover & {
     visibility: visible;

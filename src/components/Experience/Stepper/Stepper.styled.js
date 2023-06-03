@@ -2,7 +2,19 @@ import styled from "styled-components";
 import { Grid } from "@mui/material";
 
 export const LabelContainer = styled(Grid)`
-  width: 60%;
+  width: 50%;
+
+  @media (max-width: 992px) {
+    width: 75%;
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+
+  @media (max-width: 576px) {
+    width: 95%;
+  }
 `;
 
 // export const LabelContainer = styled.div`
@@ -39,7 +51,6 @@ export const YearBlock = styled.div`
   align-items: center;
   font-size: 1.1rem;
   font-weight: 600;
-  flex-shrink: 1;
 
   &::before {
     content: "";
@@ -65,7 +76,6 @@ export const Circle = styled.div`
   background-color: #ffc86b;
   border-radius: 50%;
   box-shadow: 0px 0px 20px #ffc86b;
-  flex-shrink: 1;
 `;
 
 export const Label = styled.h2`
@@ -77,6 +87,20 @@ export const Label = styled.h2`
     theme.palette.mode == "light"
       ? theme.palette.primary.dark
       : theme.palette.primary.light};
+
+  @media (max-width: 992px) {
+    /* width: 75%; */
+    /* white-space: normal; */
+  }
+
+  @media (max-width: 768px) {
+    /* width: 90%; */
+    white-space: normal;
+  }
+
+  @media (max-width: 576px) {
+    /* width: 95%; */
+  }
 `;
 
 export const DescriptionsContainer = styled.div`
@@ -95,4 +119,35 @@ export const DescriptionsContainer = styled.div`
     theme.palette.mode == "light"
       ? theme.palette.primary.dark
       : theme.palette.primary.light};
+
+  @media (max-width: 1200px) {
+    width: 80%;
+    margin-left: 8rem;
+  }
+
+  @media (max-width: 992px) {
+    width: 85%;
+    margin-left: 9.8rem;
+  }
+
+  @media (max-width: 768px) {
+    width: 85%;
+    margin-left: 7.8rem;
+  }
+
+  @media (min-width: 630px) and (max-width: 768px) {
+    margin-left: 9rem;
+  }
+
+  /* @media (max-width: 576px) {
+    width: 85%;
+  } */
+`;
+
+export const SubLabel = styled.h3`
+  white-space: nowrap;
+
+  @media (max-width: 992px) {
+    white-space: normal;
+  }
 `;

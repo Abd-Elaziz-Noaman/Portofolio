@@ -23,19 +23,19 @@ export default function Contact() {
     <ContactContainer id="Contact">
       <Title>Contact Me</Title>
       <ContentContainer container spacing={2} justifyContent="center">
-        <Grid item md={6}>
+        <Grid item lg={6} md={6} sm={8} xs={12}>
           <ContactBlock href="mailto:zizo.noaman@yahoo.com">
             <EmailIcon fontSize="large" />
             <ContaxtText>zezo.noaman@yahoo.com</ContaxtText>
           </ContactBlock>
         </Grid>
-        <Grid item md={6}>
+        <Grid item lg={6} md={6} sm={8} xs={12}>
           <ContactBlock href="tel:+201006831361">
             <PhoneIcon fontSize="large" />
             <ContaxtText>(+20) 01006831361</ContaxtText>
           </ContactBlock>
         </Grid>
-        <Grid item md={6}>
+        <Grid item lg={6} md={6} sm={8} xs={12}>
           <ContactBlock
             href="https://www.google.com/maps/search/?api=1&query=Egypt"
             target="_blank"

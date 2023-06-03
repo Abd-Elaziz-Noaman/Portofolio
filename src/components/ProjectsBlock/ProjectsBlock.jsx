@@ -7,8 +7,7 @@ import {
   AboveLayer,
   StyledImage,
 } from "./ProjectsBlock.styled";
-import { StyledTypography } from "../About/About.styled";
-import { Container } from "../About/About.styled";
+import { Container, StyledTypography } from "../About/About.styled";
 
 export default function ProjectsBlock() {
   return (
@@ -23,7 +22,7 @@ export default function ProjectsBlock() {
         Projects
       </StyledTypography>
       <Grid container spacing={0}>
-        <ProjectContainer item md={4}>
+        <ProjectContainer item lg={4} md={4} sm={4} xs={12}>
           <StyledImage
             alt="projects-pic"
             src={ProjectsPic}
@@ -33,10 +32,11 @@ export default function ProjectsBlock() {
           />
 
           <AboveLayer>
+            <h3>Project Name</h3>
             <p>My Layer Text</p>
           </AboveLayer>
         </ProjectContainer>
-        <ProjectContainer item md={4}>
+        <ProjectContainer item lg={4} md={4} sm={4} xs={12}>
           <StyledImage
             alt="projects-pic"
             src={ProjectsPic}
@@ -45,10 +45,11 @@ export default function ProjectsBlock() {
             width={350}
           />
           <AboveLayer>
+            <h3>Project Name</h3>
             <p>My Layer Text</p>
           </AboveLayer>
         </ProjectContainer>
-        <ProjectContainer item md={4}>
+        <ProjectContainer item lg={4} md={4} sm={4} xs={12}>
           <StyledImage
             alt="projects-pic"
             src={ProjectsPic}
@@ -57,13 +58,14 @@ export default function ProjectsBlock() {
             width={350}
           />
           <AboveLayer>
+            <h3>Project Name</h3>
             <p>My Layer Text</p>
           </AboveLayer>
         </ProjectContainer>
       </Grid>
       <br />
       <Grid container spacing={0}>
-        <ProjectContainer item md={4} xs={12}>
+        <ProjectContainer item lg={4} md={4} sm={4} xs={12}>
           <StyledImage
             alt="projects-pic"
             src={ProjectsPic}
@@ -73,10 +75,11 @@ export default function ProjectsBlock() {
           />
 
           <AboveLayer>
+            <h3>Project Name</h3>
             <p>My Layer Text</p>
           </AboveLayer>
         </ProjectContainer>
-        <ProjectContainer item md={4} xs={12}>
+        <ProjectContainer item lg={4} md={4} sm={4} xs={12}>
           <StyledImage
             alt="projects-pic"
             src={ProjectsPic}
@@ -85,10 +88,11 @@ export default function ProjectsBlock() {
             width={350}
           />
           <AboveLayer>
+            <h3>Project Name</h3>
             <p>My Layer Text</p>
           </AboveLayer>
         </ProjectContainer>
-        <ProjectContainer item md={4} xs={12}>
+        <ProjectContainer item lg={4} md={4} sm={4} xs={12}>
           <StyledImage
             alt="projects-pic"
             src={ProjectsPic}
@@ -97,6 +101,7 @@ export default function ProjectsBlock() {
             width={350}
           />
           <AboveLayer>
+            <h3>Project Name</h3>
             <p>My Layer Text</p>
           </AboveLayer>
         </ProjectContainer>

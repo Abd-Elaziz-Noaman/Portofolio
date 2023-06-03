@@ -4,7 +4,7 @@ import { Grid } from "@mui/material";
 
 export const ContactContainer = styled.div`
   /* width: 80%;
-  margin: auto; */s
+  margin: auto; */
 `;
 
 export const Title = styled.h1`
@@ -25,6 +25,18 @@ export const Title = styled.h1`
     width: 85%;
     height: 3px;
     background-color: #ffc86b;
+
+    @media (max-width: 1200px) {
+      width: 75%;
+    }
+
+    @media (max-width: 992px) {
+      width: 70%;
+    }
+
+    @media (max-width: 768px) {
+      width: 60%;
+    }
   }
 
   &::before {
@@ -60,6 +72,18 @@ export const ContentContainer = styled(Grid)`
   width: 60%;
   margin: auto;
   padding: 1rem 0;
+
+  @media (max-width: 1200px) {
+    width: 80%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media (max-width: 590px) {
+    width: 87%;
+  }
 `;
 
 export const ContactBlock = styled(Link)`
@@ -82,6 +106,10 @@ export const ContactBlock = styled(Link)`
 
   &:hover {
     filter: brightness(100%);
+  }
+
+  @media (max-width: 1200px) {
+    width: 100%;
   }
 `;
 

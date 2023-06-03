@@ -6,6 +6,7 @@ import {
   Circle,
   Label,
   DescriptionsContainer,
+  SubLabel,
 } from "./Stepper.styled";
 
 export default function Stepper({ steps }) {
@@ -14,13 +15,13 @@ export default function Stepper({ steps }) {
       {steps.map((step, index) => (
         <div key={index}>
           <LabelContainer container spacing={2} alignItems="center">
-            <Grid item md={3}>
+            <Grid item lg={3} md={3} sm={3} xs={3}>
               <YearBlock>{step.year}</YearBlock>
             </Grid>
-            <Grid item md={1}>
+            <Grid item lg={1} md={1} sm={1} xs={2}>
               <Circle></Circle>
             </Grid>
-            <Grid item md={8}>
+            <Grid item lg={8} md={8} sm={8} xs={7}>
               <Label>{step.label}</Label>
             </Grid>
           </LabelContainer>
@@ -30,7 +31,7 @@ export default function Stepper({ steps }) {
             <h2 style={{ whiteSpace: "nowrap" }}>{step.label}</h2>
           </LabelContainer> */}
           <DescriptionsContainer>
-            <h3 style={{ whiteSpace: "nowrap" }}>{step.subLabel}</h3>
+            <SubLabel>{step.subLabel}</SubLabel>
             <br />
             <p>{step.description}</p>
           </DescriptionsContainer>

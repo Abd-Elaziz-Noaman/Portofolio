@@ -50,8 +50,15 @@ export default function About() {
         About
       </StyledTypography>
       <Grid container spacing={1}>
-        <Grid item md={1} sx={{ borderTop: "4px solid #ffc86b" }}></Grid>
-        <Grid item md={11}>
+        <Grid
+          item
+          lg={1}
+          md={3}
+          sm={4}
+          xs={6}
+          sx={{ borderTop: "4px solid #ffc86b" }}
+        ></Grid>
+        <Grid item lg={11} md={9} sm={12} xs={12}>
           <StyledTypography variant="h6" component="p" mt={-3}>
             I am a web developer with an amazing ability to develop websites
             that are both functional and aesthetically pleasing. I have a strong

@@ -39,24 +39,24 @@ export default function Navigator() {
   const theme = useTheme();
 
   const [anchorElNav, setAnchorElNav] = useState(null);
-  const [anchorElUser, setAnchorElUser] = useState(null);
+  // const [anchorElUser, setAnchorElUser] = useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+  // const handleOpenUserMenu = (event) => {
+  //   setAnchorElUser(event.currentTarget);
+  // };
 
   const handleCloseNavMenu = (blockId) => {
-    // setAnchorElNav(null);
+    setAnchorElNav(null);
     const targetDiv = document.getElementById(blockId);
     targetDiv.scrollIntoView({ behavior: "smooth" });
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+  // const handleCloseUserMenu = () => {
+  //   setAnchorElUser(null);
+  // };
   return (
     <StyledAppBar position="fixed" theme={theme}>
       <Container maxWidth="xl">
@@ -68,23 +68,6 @@ export default function Navigator() {
             height={60}
             sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
           />
-          {/* <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            LOGO
-          </Typography> */}
 
           <Box
             sx={{
@@ -115,7 +98,8 @@ export default function Navigator() {
                 horizontal: "left",
               }}
               open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
+              // onClose={handleCloseNavMenu}
+              onClose={() => setAnchorElNav(null)}
               sx={{
                 display: { xs: "block", md: "none" },
               }}
@@ -131,24 +115,6 @@ export default function Navigator() {
               ))}
             </Menu>
           </Box>
-          {/* <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            LOGO
-          </Typography> */}
           <NavButtonsContainer
             sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
           >

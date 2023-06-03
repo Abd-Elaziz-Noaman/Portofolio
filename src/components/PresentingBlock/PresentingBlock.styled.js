@@ -1,10 +1,15 @@
 import styled from "styled-components";
+import Image from "next/image";
 import { Grid, Button } from "@mui/material";
 
 export const BlockContainer = styled(Grid)`
   height: 100%;
   min-height: 92.2vh;
   margin-top: 5vh;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 export const LeftGrid = styled(Grid)`
@@ -26,6 +31,12 @@ export const LeftGrid = styled(Grid)`
 
   & > div {
     padding: 0 12rem;
+
+    @media (max-width: 768px) {
+      padding: 0;
+      margin: auto;
+      margin-top: 1.7rem;
+    }
   }
 `;
 
@@ -77,5 +88,16 @@ export const ContactMeBtn = styled(Button)`
           ? theme.palette.primary.light
           : theme.palette.primary.dark};
     }
+  }
+`;
+
+export const StyledImage = styled(Image)`
+  height: 40rem;
+  width: 40rem;
+
+  @media (max-width: 768px) {
+    height: 30rem;
+    width: 30rem;
+    margin: auto;
   }
 `;
