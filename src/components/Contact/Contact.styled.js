@@ -4,7 +4,7 @@ import { Grid } from "@mui/material";
 
 export const ContactContainer = styled.div`
   /* width: 80%;
-  margin: auto; */
+  margin: auto; */s
 `;
 
 export const Title = styled.h1`
@@ -59,6 +59,7 @@ export const StyledLink = styled(Link)`
 export const ContentContainer = styled(Grid)`
   width: 60%;
   margin: auto;
+  padding: 1rem 0;
 `;
 
 export const ContactBlock = styled(Link)`

@@ -49,8 +49,8 @@ export default function Contact() {
         <RoomIcon />
         <p>Cairo, Egypt</p>
       </ContactBlock> */}
-      <br />
-      <br />
+      {/* <br />
+      <br /> */}
       <SocialIconsContainer>
         <StyledLink href="https://www.facebook.com/zezo.noaman" target="_blank">
           <FacebookIcon
