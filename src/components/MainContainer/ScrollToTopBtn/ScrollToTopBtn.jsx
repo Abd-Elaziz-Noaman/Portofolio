@@ -24,7 +24,6 @@ function ScrollToTopBtn() {
     <StyledButton
       className="scroll-to-top"
       onClick={handleClick}
-      //   style={{ opacity: isVisible ? 1 : 0 }}
       isVisible={isVisible}
     >
       <KeyboardDoubleArrowUpIcon fontSize="large" />
