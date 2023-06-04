@@ -16,6 +16,11 @@ export const ModeIconContainer = styled(Box)`
   padding: 0.5rem;
   border-radius: 0.5rem;
   cursor: pointer;
+
+  @media (max-width: 400px) {
+    height: 35px;
+    width: 35px;
+  }
 `;
 
 export const StyledAppBar = styled(AppBar)`
@@ -30,6 +35,10 @@ export const StyledAppBar = styled(AppBar)`
         ? theme.palette.primary.dark
         : theme.palette.primary.light};
     box-shadow: none;
+
+    @media (max-width: 400px) {
+      height: 10vh;
+    }
   }
 `;
 

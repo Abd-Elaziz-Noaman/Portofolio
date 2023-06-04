@@ -82,6 +82,7 @@ export default function Navigator() {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
+              sx={{ ml: { xs: -3 } }}
             >
               <MenuIcon />
             </IconButton>
