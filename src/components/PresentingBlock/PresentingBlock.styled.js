@@ -37,6 +37,11 @@ export const LeftGrid = styled(Grid)`
       margin: auto;
       margin-top: 1.7rem;
     }
+
+    @media (max-width: 400px) {
+      padding-left: 0.5rem;
+      margin-top: 1rem;
+    }
   }
 `;
 
@@ -62,16 +67,29 @@ export const Name = styled.p`
   font-size: 1.7rem;
   margin-bottom: 0.5rem;
 
+  @media (max-width: 678px) {
+    font-size: 1.4rem;
+  }
+
   & > span {
     font-size: 1.9rem;
     font-weight: bold;
     color: #ffc86b;
+
+    @media (max-width: 678px) {
+      font-size: 1.5rem;
+    }
   }
 `;
 
 export const Title = styled.p`
   font-size: 1.7rem;
   margin-bottom: 1.5rem;
+
+  @media (max-width: 678px) {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
 `;
 
 export const ContactMeBtn = styled(Button)`
@@ -79,6 +97,10 @@ export const ContactMeBtn = styled(Button)`
     color: #ffc86b;
     border: 3px solid #ffc86b;
     font-weight: bold;
+
+    @media (max-width: 678px) {
+      font-size: 0.8rem;
+    }
 
     &:hover {
       border: 3px solid #ffc86b;
@@ -99,5 +121,11 @@ export const StyledImage = styled(Image)`
     height: 30rem;
     width: 30rem;
     margin: auto;
+  }
+
+  @media (max-width: 400px) {
+    height: 20rem;
+    width: 20rem;
+    margin-left: 0;
   }
 `;
