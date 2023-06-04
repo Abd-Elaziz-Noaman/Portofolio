@@ -46,7 +46,7 @@ export default function About() {
         mt={2}
         mb={4}
         sx={{ fontWeight: "500" }}
-        header={true}
+        header
       >
         About
       </StyledTypography>
@@ -89,7 +89,7 @@ export default function About() {
         align="center"
         mt={10}
         sx={{ fontWeight: "500" }}
-        header={true}
+        header
       >
         My Skills
       </StyledTypography>

@@ -18,6 +18,7 @@ export default function ProjectsBlock() {
         align="center"
         mb={4}
         sx={{ fontWeight: "500" }}
+        header
       >
         Projects
       </StyledTypography>

@@ -16,6 +16,11 @@ export const ProjectContainer = styled(Grid)`
     height: 400px;
     margin-bottom: 1.4rem;
   }
+
+  @media (max-width: 400px) {
+    height: 300px;
+    margin-bottom: 1.4rem;
+  }
 `;
 
 export const AboveLayer = styled(Box)`
@@ -40,6 +45,10 @@ export const AboveLayer = styled(Box)`
 
   @media (max-width: 600px) {
     margin-top: 400px;
+  }
+
+  @media (max-width: 400px) {
+    margin-top: 300px;
   }
 
   ${ProjectContainer}:hover & {
