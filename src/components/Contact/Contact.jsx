@@ -4,6 +4,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 import RoomIcon from "@mui/icons-material/Room";
@@ -71,6 +72,12 @@ export default function Contact() {
           <WhatsAppIcon
             fontSize="medium"
             sx={{ "&:hover": { color: "#25D366" } }}
+          />
+        </StyledLink>
+        <StyledLink href="https://github.com/Abd-Elaziz-Noaman" target="_blank">
+          <GitHubIcon
+            fontSize="medium"
+            sx={{ "&:hover": { color: "#171515" } }}
           />
         </StyledLink>
       </SocialIconsContainer>
