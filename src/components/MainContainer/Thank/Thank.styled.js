@@ -11,4 +11,19 @@ export const ThankContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 400px) {
+    min-height: 80px;
+    text-align: center;
+  }
+
+  & > h2 {
+    @media (max-width: 678px) {
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 400px) {
+      font-size: 0.8rem;
+    }
+  }
 `;

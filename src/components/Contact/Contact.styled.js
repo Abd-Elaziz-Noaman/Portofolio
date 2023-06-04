@@ -37,6 +37,10 @@ export const Title = styled.h1`
     @media (max-width: 768px) {
       width: 60%;
     }
+
+    @media (max-width: 576px) {
+      width: 35%;
+    }
   }
 
   &::before {
@@ -84,6 +88,10 @@ export const ContentContainer = styled(Grid)`
   @media (max-width: 590px) {
     width: 87%;
   }
+
+  @media (max-width: 400px) {
+    width: 90%;
+  }
 `;
 
 export const ContactBlock = styled(Link)`
@@ -111,6 +119,10 @@ export const ContactBlock = styled(Link)`
   @media (max-width: 1200px) {
     width: 100%;
   }
+
+  @media (max-width: 400px) {
+    padding: 1rem;
+  }
 `;
 
 export const ContaxtText = styled.p`
@@ -118,4 +130,9 @@ export const ContaxtText = styled.p`
   color: #ffc86b;
   letter-spacing: 1px;
   margin-left: 1rem;
+
+  @media (max-width: 400px) {
+    font-size: 1rem;
+    margin-left: 0.4rem;
+  }
 `;

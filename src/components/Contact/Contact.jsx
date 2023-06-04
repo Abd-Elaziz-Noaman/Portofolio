@@ -45,12 +45,6 @@ export default function Contact() {
           </ContactBlock>
         </Grid>
       </ContentContainer>
-      {/* <ContactBlock href="">
-        <RoomIcon />
-        <p>Cairo, Egypt</p>
-      </ContactBlock> */}
-      {/* <br />
-      <br /> */}
       <SocialIconsContainer>
         <StyledLink href="https://www.facebook.com/zezo.noaman" target="_blank">
           <FacebookIcon
