@@ -98,6 +98,10 @@ export const Circle = styled.div`
     width: 22px;
     margin-left: 0.3rem;
   }
+
+  @media (max-width: 400px) and (max-height: 800px) {
+    margin-left: -0.3rem;
+  }
 `;
 
 export const Label = styled.h2`
@@ -124,6 +128,11 @@ export const Label = styled.h2`
   @media (max-width: 576px) {
     /* width: 95%; */
     font-size: 0.9rem;
+  }
+
+  @media (max-width: 400px) and (max-height: 800px) {
+    /* margin-left: 9rem; */
+    padding-left: 0rem;
   }
 `;
 
@@ -167,6 +176,16 @@ export const DescriptionsContainer = styled.div`
     width: 100%;
     margin-left: 5.4rem;
     padding-left: 1.3rem;
+    padding-right: 4.8rem;
+  }
+
+  @media (max-width: 400px) and (max-height: 800px) {
+    margin-left: 5.7rem;
+    padding-right: 5rem;
+  }
+
+  @media (max-width: 330px) {
+    margin-left: 5.4rem;
     padding-right: 4.8rem;
   }
 

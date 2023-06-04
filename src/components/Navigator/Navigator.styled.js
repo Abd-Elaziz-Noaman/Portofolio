@@ -39,6 +39,10 @@ export const StyledAppBar = styled(AppBar)`
     @media (max-width: 400px) {
       height: 10vh;
     }
+
+    @media (max-width: 400px) and (max-height: 800px) {
+      height: 8.2vh;
+    }
   }
 `;
 

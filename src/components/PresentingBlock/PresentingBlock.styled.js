@@ -10,6 +10,15 @@ export const BlockContainer = styled(Grid)`
   @media (max-width: 768px) {
     flex-direction: column-reverse;
   }
+
+  @media (max-width: 400px) and (max-height: 800px) {
+    margin-top: -6vh;
+    margin-bottom: 3.7rem;
+  }
+
+  @media (max-width: 330px) {
+    margin-top: 3vh;
+  }
 `;
 
 export const LeftGrid = styled(Grid)`
@@ -41,6 +50,16 @@ export const LeftGrid = styled(Grid)`
     @media (max-width: 400px) {
       padding-left: 0.5rem;
       margin-top: 1rem;
+    }
+
+    @media (max-width: 400px) and (max-height: 800px) {
+      padding-left: 0;
+      margin-left: 2.8rem;
+    }
+
+    @media (max-width: 330px) {
+      padding-left: 0.5rem;
+      margin-left: auto;
     }
   }
 `;
