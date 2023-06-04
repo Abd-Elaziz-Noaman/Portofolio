@@ -16,6 +16,10 @@ export const Container = styled(Box)`
   @media (max-width: 576px) {
     padding: 2rem 5rem;
   }
+
+  @media (max-width: 400px) {
+    padding: 2rem 1rem;
+  }
 `;
 
 export const StyledTypography = styled(Typography)`
@@ -24,4 +28,14 @@ export const StyledTypography = styled(Typography)`
       ? theme.palette.primary.dark
       : theme.palette.primary.light};
   margin-top: 5vh;
+
+  @media (max-width: 678px) {
+    font-size: ${({ header }) => (header ? "2.5rem" : "1rem")};
+    margin-top: 2vh;
+  }
+
+  @media (max-width: 400px) {
+    font-size: ${({ header }) => (header ? "2.5rem" : "0.9rem")};
+    margin-top: 1vh;
+  }
 `;

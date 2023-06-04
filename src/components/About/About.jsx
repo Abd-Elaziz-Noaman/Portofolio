@@ -46,6 +46,7 @@ export default function About() {
         mt={2}
         mb={4}
         sx={{ fontWeight: "500" }}
+        header={true}
       >
         About
       </StyledTypography>
@@ -59,7 +60,12 @@ export default function About() {
           sx={{ borderTop: "4px solid #ffc86b" }}
         ></Grid>
         <Grid item lg={11} md={9} sm={12} xs={12}>
-          <StyledTypography variant="h6" component="p" mt={-3}>
+          <StyledTypography
+            variant="h6"
+            component="p"
+            mt={-3}
+            sx={{ fontSize: { md: "1.5rem", xs: "1rem" } }}
+          >
             I am a web developer with an amazing ability to develop websites
             that are both functional and aesthetically pleasing. I have a strong
             understanding of web standards and best practices, and I am
@@ -76,13 +82,14 @@ export default function About() {
           </StyledTypography>
         </Grid>
       </Grid>
-
+      <br />
       <StyledTypography
         variant="h2"
         component="h2"
         align="center"
         mt={10}
         sx={{ fontWeight: "500" }}
+        header={true}
       >
         My Skills
       </StyledTypography>
@@ -92,7 +99,7 @@ export default function About() {
         lg={3}
         md={3}
         sm={6}
-        xs={12}
+        xs={6}
       />
       <GridDrawer
         content={SkillsGrid_2}
@@ -100,7 +107,7 @@ export default function About() {
         lg={3}
         md={3}
         sm={6}
-        xs={12}
+        xs={6}
       />
       <GridDrawer
         content={SkillsGrid_3}
@@ -108,7 +115,7 @@ export default function About() {
         lg={3}
         md={3}
         sm={6}
-        xs={12}
+        xs={6}
       />
     </Container>
   );

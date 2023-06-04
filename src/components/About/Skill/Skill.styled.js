@@ -5,10 +5,12 @@ import { Box } from "@mui/material";
 export const SkillBlock = styled(Box)`
   height: 230px;
   width: 90%;
+  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  text-align: center;
   background-color: ${({ theme }) =>
     theme.palette.mode == "light"
       ? theme.palette.secondary.light
@@ -24,6 +26,10 @@ export const SkillBlock = styled(Box)`
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 
+  @media (max-width: 400px) {
+    height: 150px;
+  }
+
   &:hover {
     background-color: #ffc86b;
     transform: translateY(-8px);
@@ -34,6 +40,11 @@ export const ImageContainer = styled.div`
   height: 100px;
   width: 100px;
   position: relative;
+
+  @media (max-width: 400px) {
+    height: 50px;
+    width: 50px;
+  }
 `;
 
 export const SkillImage = styled(Image)`

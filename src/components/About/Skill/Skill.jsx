@@ -11,7 +11,11 @@ export default function Skill(props) {
       <ImageContainer>
         <SkillImage alt={title} src={image} layout="fill" />
       </ImageContainer>
-      <Typography variant="h6" component="p">
+      <Typography
+        variant="h6"
+        component="p"
+        sx={{ fontSize: { md: "1.3rem", xs: "0.9rem" } }}
+      >
         {title}
       </Typography>
     </SkillBlock>
