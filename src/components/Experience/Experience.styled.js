@@ -7,4 +7,8 @@ export const StepperContainer = styled.div`
   @media (max-width: 1200px) {
     width: 95%;
   }
+
+  @media (max-width: 400px) {
+    width: 100%;
+  }
 `;

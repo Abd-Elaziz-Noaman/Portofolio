@@ -21,7 +21,7 @@ export default function PresentingBlock() {
   };
   return (
     <BlockContainer container spacing={2} id="Home">
-      <LeftGrid item md={6} xs={12}>
+      <LeftGrid item md={6} sm={6} xs={12}>
         <div>
           <Name>
             I&apos;M <span>Abd El&#x2D;aziz Noaman</span>
@@ -36,7 +36,7 @@ export default function PresentingBlock() {
           </ContactMeBtn>
         </div>
       </LeftGrid>
-      <RightGrid item md={6} xs={12}>
+      <RightGrid item md={6} sm={6} xs={12}>
         <StyledImage
           alt="Abd El-aziz's Image"
           src={MyPic}

@@ -20,6 +20,7 @@ export const ProjectContainer = styled(Grid)`
   @media (max-width: 400px) {
     height: 300px;
     margin-bottom: 1.4rem;
+    margin-left: 1rem;
   }
 `;
 

@@ -18,10 +18,10 @@ export default function Stepper({ steps }) {
             <Grid item lg={3} md={3} sm={3} xs={3}>
               <YearBlock>{step.year}</YearBlock>
             </Grid>
-            <Grid item lg={1} md={1} sm={1} xs={2}>
+            <Grid item lg={1} md={1} sm={1} xs={1}>
               <Circle></Circle>
             </Grid>
-            <Grid item lg={8} md={8} sm={8} xs={7}>
+            <Grid item lg={8} md={8} sm={8} xs={8}>
               <Label>{step.label}</Label>
             </Grid>
           </LabelContainer>
@@ -32,7 +32,6 @@ export default function Stepper({ steps }) {
           </LabelContainer> */}
           <DescriptionsContainer>
             <SubLabel>{step.subLabel}</SubLabel>
-            <br />
             <p>{step.description}</p>
           </DescriptionsContainer>
           <br />

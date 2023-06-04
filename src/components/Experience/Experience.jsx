@@ -53,6 +53,7 @@ export default function Experience() {
         mt={2}
         mb={4}
         sx={{ fontWeight: "500" }}
+        header
       >
         Experience
       </StyledTypography>

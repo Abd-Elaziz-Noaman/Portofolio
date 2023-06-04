@@ -15,6 +15,10 @@ export const LabelContainer = styled(Grid)`
   @media (max-width: 576px) {
     width: 95%;
   }
+
+  @media (max-width: 400px) {
+    width: 100%;
+  }
 `;
 
 // export const LabelContainer = styled.div`
@@ -52,6 +56,12 @@ export const YearBlock = styled.div`
   font-size: 1.1rem;
   font-weight: 600;
 
+  @media (max-width: 400px) {
+    width: 50px;
+    height: 34px;
+    font-size: 0.9rem;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -67,6 +77,12 @@ export const YearBlock = styled.div`
         theme.palette.mode == "light"
           ? theme.palette.secondary.light
           : theme.palette.secondary.dark};
+
+    @media (max-width: 400px) {
+      border-top: 17px solid transparent;
+      border-bottom: 17px solid transparent;
+      margin-top: -17px;
+    }
   }
 `;
 
@@ -76,6 +92,12 @@ export const Circle = styled.div`
   background-color: #ffc86b;
   border-radius: 50%;
   box-shadow: 0px 0px 20px #ffc86b;
+
+  @media (max-width: 400px) {
+    height: 22px;
+    width: 22px;
+    margin-left: 0.3rem;
+  }
 `;
 
 export const Label = styled.h2`
@@ -95,11 +117,13 @@ export const Label = styled.h2`
 
   @media (max-width: 768px) {
     /* width: 90%; */
+    font-size: 1.2rem;
     white-space: normal;
   }
 
   @media (max-width: 576px) {
     /* width: 95%; */
+    font-size: 0.9rem;
   }
 `;
 
@@ -139,15 +163,47 @@ export const DescriptionsContainer = styled.div`
     margin-left: 9rem;
   }
 
+  @media (max-width: 400px) {
+    width: 100%;
+    margin-left: 5.4rem;
+    padding-left: 1.3rem;
+    padding-right: 4.8rem;
+  }
+
   /* @media (max-width: 576px) {
     width: 85%;
   } */
+
+  & > p {
+    margin-top: 0.7rem;
+
+    @media (max-width: 992px) {
+      font-size: 1rem;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 400px) {
+      font-size: 0.7rem;
+    }
+  }
 `;
 
 export const SubLabel = styled.h3`
   white-space: nowrap;
+  margin-top: 0.3rem;
 
   @media (max-width: 992px) {
     white-space: normal;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 0.8rem;
   }
 `;
