@@ -19,29 +19,32 @@ import {
 
 export default function PresentingBlock() {
   const nameRef = useRef(null);
-  const titleRef = useRef(null);
+  // const titleRef = useRef(null);
 
   useEffect(() => {
     const nameTyped = new Typed(nameRef.current, {
-      strings: [`I&apos;M <span>Abd El&#x2D;aziz Noaman</span>`],
+      strings: [
+        `I&apos;M <span>Abd El&#x2D;aziz Noaman</span>`,
+        `<span>Web Developer</span>`,
+      ],
       typeSpeed: 50,
       backSpeed: 0,
-      loop: false,
-      showCursor: false,
+      loop: true,
+      showCursor: true,
     });
 
-    const titleTyped = new Typed(titleRef.current, {
-      strings: ["Web Developer"],
-      typeSpeed: 50,
-      backSpeed: 0,
-      loop: false,
-      showCursor: false,
-      startDelay: 1000,
-    });
+    // const titleTyped = new Typed(titleRef.current, {
+    //   strings: ["Web Developer"],
+    //   typeSpeed: 50,
+    //   backSpeed: 0,
+    //   loop: false,
+    //   showCursor: false,
+    //   startDelay: 1000,
+    // });
 
     return () => {
       nameTyped.destroy();
-      titleTyped.destroy();
+      // titleTyped.destroy();
     };
   }, []);
 
@@ -56,7 +59,8 @@ export default function PresentingBlock() {
           <Name ref={nameRef}>
             I&apos;M <span>Abd El&#x2D;aziz Noaman</span>
           </Name>
-          <Title ref={titleRef}>Web Developer</Title>
+          {/* <Title>Web Developer</Title> */}
+          <Title></Title>
           <ContactMeBtn
             variant="outlined"
             size="large"
