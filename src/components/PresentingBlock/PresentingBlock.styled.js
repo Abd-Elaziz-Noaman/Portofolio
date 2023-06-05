@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { Grid, Button } from "@mui/material";
 
 export const BlockContainer = styled(Grid)`
@@ -132,9 +133,20 @@ export const ContactMeBtn = styled(Button)`
   }
 `;
 
+export const ImageAnimationContainer = styled(motion.div)`
+  /* position: fixed; */
+`;
+
 export const StyledImage = styled(Image)`
   height: 40rem;
   width: 40rem;
+  filter: drop-shadow(
+    0px 0px 5px
+      ${({ theme }) =>
+        theme.palette.mode == "light"
+          ? theme.palette.primary.dark
+          : theme.palette.primary.light}
+  );
 
   @media (max-width: 768px) {
     height: 30rem;
