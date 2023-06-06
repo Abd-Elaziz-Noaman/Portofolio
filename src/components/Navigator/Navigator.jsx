@@ -106,13 +106,13 @@ export default function Navigator() {
               }}
             >
               {pages.map((page) => (
-                <StyledMenuItem
+                <StyledButton
                   key={page}
                   onClick={() => handleCloseNavMenu(page)}
                   // sx={{ color: "black" }}
                 >
                   <Typography textAlign="center">{page}</Typography>
-                </StyledMenuItem>
+                </StyledButton>
               ))}
             </Menu>
           </Box>
