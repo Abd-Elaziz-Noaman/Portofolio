@@ -100,7 +100,7 @@ export default function Navigator() {
               }}
               open={Boolean(anchorElNav)}
               // onClose={handleCloseNavMenu}
-              // onClose={() => setAnchorElNav(null)}
+              onClose={() => setAnchorElNav(null)}
               sx={{
                 display: { xs: "block", md: "none" },
               }}
