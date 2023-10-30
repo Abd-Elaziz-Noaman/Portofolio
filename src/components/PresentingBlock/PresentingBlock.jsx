@@ -4,7 +4,8 @@ import Image from "next/image";
 import { useScroll, useSpring } from "framer-motion";
 import Typed from "typed.js";
 
-import MyPic from "../../images/my-pic.webp";
+// import MyPic from "../../images/my-pic.webp";
+import MyPic from "../../images/hacker.png";
 
 import {
   BlockContainer,
@@ -72,8 +73,8 @@ export default function PresentingBlock() {
       </LeftGrid>
       <RightGrid item md={6} sm={6} xs={12}>
         <ImageAnimationContainer
-          initial={{ scale: 1 }}
-          animate={{ scale: [1, 1.07, 1] }}
+          initial={{ scale: 0.6 }}
+          animate={{ scale: [0.6, 0.67, 0.6] }}
           transition={{
             duration: 2,
             repeat: Infinity,

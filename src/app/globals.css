@@ -110,3 +110,7 @@ a {
     color-scheme: dark;
   }
 }
+
+#eJOY__extension_ai_adv_root .eJOY__container {
+  display: none;
+}

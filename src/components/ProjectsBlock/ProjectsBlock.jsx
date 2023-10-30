@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Typography, Grid } from "@mui/material";
 
 import ProjectsPic from "../../images/projects/projects2.webp";
+import Proj1 from "../../images/projects/proj.gif";
 import {
   ProjectContainer,
   AboveLayer,
@@ -26,41 +27,42 @@ export default function ProjectsBlock() {
         <ProjectContainer item lg={4} md={4} sm={4} xs={12}>
           <StyledImage
             alt="projects-pic"
-            src={ProjectsPic}
+            src={Proj1}
             // layout="fill"
-            // height={350}
-            // width={350}
+            height={350}
+            width={350}
           />
 
           <AboveLayer>
             <h3>Project Name</h3>
-            <p>My Layer Text</p>
+            <p>Project Description Layer</p>
           </AboveLayer>
         </ProjectContainer>
         <ProjectContainer item lg={4} md={4} sm={4} xs={12}>
           <StyledImage
             alt="projects-pic"
-            src={ProjectsPic}
+            src={Proj1}
             // layout="fill"
             height={350}
             width={350}
           />
           <AboveLayer>
             <h3>Project Name</h3>
-            <p>My Layer Text</p>
+            <p>Project Description Layer</p>
           </AboveLayer>
         </ProjectContainer>
         <ProjectContainer item lg={4} md={4} sm={4} xs={12}>
           <StyledImage
             alt="projects-pic"
-            src={ProjectsPic}
+            // src={ProjectsPic}
+            src={Proj1}
             // layout="fill"
             height={350}
             width={350}
           />
           <AboveLayer>
             <h3>Project Name</h3>
-            <p>My Layer Text</p>
+            <p>Project Description Layer</p>
           </AboveLayer>
         </ProjectContainer>
       </Grid>
@@ -69,7 +71,7 @@ export default function ProjectsBlock() {
         <ProjectContainer item lg={4} md={4} sm={4} xs={12}>
           <StyledImage
             alt="projects-pic"
-            src={ProjectsPic}
+            src={Proj1}
             // layout="fill"
             height={350}
             width={350}
@@ -77,33 +79,33 @@ export default function ProjectsBlock() {
 
           <AboveLayer>
             <h3>Project Name</h3>
-            <p>My Layer Text</p>
+            <p>Project Description Layer</p>
           </AboveLayer>
         </ProjectContainer>
         <ProjectContainer item lg={4} md={4} sm={4} xs={12}>
           <StyledImage
             alt="projects-pic"
-            src={ProjectsPic}
+            src={Proj1}
             // layout="fill"
             height={350}
             width={350}
           />
           <AboveLayer>
             <h3>Project Name</h3>
-            <p>My Layer Text</p>
+            <p>Project Description Layer</p>
           </AboveLayer>
         </ProjectContainer>
         <ProjectContainer item lg={4} md={4} sm={4} xs={12}>
           <StyledImage
             alt="projects-pic"
-            src={ProjectsPic}
+            src={Proj1}
             // layout="fill"
             height={350}
             width={350}
           />
           <AboveLayer>
             <h3>Project Name</h3>
-            <p>My Layer Text</p>
+            <p>Project Description Layer</p>
           </AboveLayer>
         </ProjectContainer>
       </Grid>
