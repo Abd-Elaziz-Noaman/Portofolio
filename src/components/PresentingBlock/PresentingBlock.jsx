@@ -5,7 +5,7 @@ import { useScroll, useSpring } from "framer-motion";
 import Typed from "typed.js";
 
 // import MyPic from "../../images/my-pic.webp";
-import MyPic from "../../images/hacker.png";
+import MyPic from "public/images/hacker.png";
 
 import {
   BlockContainer,

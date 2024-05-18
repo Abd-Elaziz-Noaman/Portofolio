@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Typography, Grid } from "@mui/material";
 
-import ProjectsPic from "../../images/projects/projects2.webp";
-import Proj1 from "../../images/projects/proj.gif";
+import Proj1 from "public/images/projects/proj.gif";
 import {
   ProjectContainer,
   AboveLayer,

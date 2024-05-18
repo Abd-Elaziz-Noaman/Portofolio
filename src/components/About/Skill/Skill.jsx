@@ -9,7 +9,7 @@ export default function Skill(props) {
   return (
     <SkillBlock>
       <ImageContainer>
-        <SkillImage alt={title} src={image} layout="fill" />
+        <SkillImage alt={title} src={image} layout="fill" priority={true} />
       </ImageContainer>
       <Typography
         variant="h6"

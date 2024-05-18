@@ -21,7 +21,7 @@ import NightsStayIcon from "@mui/icons-material/NightsStay";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import NightlightIcon from "@mui/icons-material/Nightlight";
 import Image from "next/image";
-import Logo from "../../images/code-logo.webp";
+import Logo from "public/images/code-logo.webp";
 import ThemeContext from "../../store/themeContext";
 import {
   ModeIconContainer,
