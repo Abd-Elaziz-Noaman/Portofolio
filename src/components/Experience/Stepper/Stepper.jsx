@@ -30,17 +30,28 @@ export default function Stepper({ steps }) {
             <Circle></Circle>
             <h2 style={{ whiteSpace: "nowrap" }}>{step.label}</h2>
           </LabelContainer> */}
-          <DescriptionsContainer>
-            <SubLabel>{step.subLabel}</SubLabel>
-            <ul style={{ marginLeft: "15px", marginTop: "15px" }}>
-              {step.description.map((ele, index) => (
-                <li key={index} style={{ marginBottom: "10px" }}>
-                  {ele}
-                </li>
-              ))}
-            </ul>
-          </DescriptionsContainer>
-          <br />
+          <LabelContainer container spacing={2} alignItems="center">
+            <Grid item lg={3} md={3} sm={3} xs={3}></Grid>
+            <Grid item lg={9} md={9} sm={9} xs={9}>
+              <DescriptionsContainer>
+                <SubLabel>{step.subLabel}</SubLabel>
+                <ul
+                  style={{
+                    width: "50vw",
+                    marginLeft: "15px",
+                    marginTop: "15px",
+                  }}
+                >
+                  {step.description.map((ele, index) => (
+                    <li key={index} style={{ marginBottom: "10px" }}>
+                      <p>{ele}</p>
+                    </li>
+                  ))}
+                </ul>
+              </DescriptionsContainer>
+              <br />
+            </Grid>
+          </LabelContainer>
         </div>
       ))}
     </>

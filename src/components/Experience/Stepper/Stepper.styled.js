@@ -105,19 +105,14 @@ export const Circle = styled.div`
 `;
 
 export const Label = styled.h2`
+  width: 50vw;
   text-align: left;
-  white-space: nowrap;
   padding-left: 1rem;
   letter-spacing: 0.8px;
   color: ${({ theme }) =>
     theme.palette.mode == "light"
       ? theme.palette.primary.dark
       : theme.palette.primary.light};
-
-  @media (max-width: 992px) {
-    /* width: 75%; */
-    /* white-space: normal; */
-  }
 
   @media (max-width: 768px) {
     /* width: 90%; */
@@ -127,22 +122,17 @@ export const Label = styled.h2`
 
   @media (max-width: 576px) {
     /* width: 95%; */
+    padding-left: 0;
     font-size: 0.9rem;
-  }
-
-  @media (max-width: 400px) and (max-height: 800px) {
-    /* margin-left: 9rem; */
-    padding-left: 0rem;
   }
 `;
 
 export const DescriptionsContainer = styled.div`
   height: auto;
-  width: 70%;
+  width: 100%;
   margin: auto;
-  margin-left: 9.3rem;
-  /* margin-left: 16%; */
-  padding-left: 3rem;
+  margin-left: 13px;
+  padding-left: 12%;
   border-left: 5px solid
     ${({ theme }) =>
       theme.palette.mode == "light"
@@ -153,47 +143,17 @@ export const DescriptionsContainer = styled.div`
       ? theme.palette.primary.dark
       : theme.palette.primary.light};
 
-  @media (max-width: 1200px) {
-    width: 80%;
-    margin-left: 8rem;
-  }
-
-  @media (max-width: 992px) {
-    width: 85%;
-    margin-left: 9.8rem;
-  }
-
-  @media (max-width: 768px) {
-    width: 85%;
-    margin-left: 7.8rem;
-  }
-
-  @media (min-width: 630px) and (max-width: 768px) {
-    margin-left: 9rem;
-  }
-
   @media (max-width: 400px) {
-    width: 100%;
-    margin-left: 5.4rem;
+    margin-left: 4px;
     padding-left: 1.3rem;
     padding-right: 4.8rem;
   }
 
-  @media (max-width: 400px) and (max-height: 800px) {
-    margin-left: 5.7rem;
-    padding-right: 5rem;
-  }
-
   @media (max-width: 330px) {
-    margin-left: 5.4rem;
     padding-right: 4.8rem;
   }
 
-  /* @media (max-width: 576px) {
-    width: 85%;
-  } */
-
-  & > p {
+  & p {
     margin-top: 0.7rem;
 
     @media (max-width: 992px) {
@@ -211,6 +171,7 @@ export const DescriptionsContainer = styled.div`
 `;
 
 export const SubLabel = styled.h3`
+  width: 50vw;
   white-space: nowrap;
   margin-top: 0.3rem;
 
