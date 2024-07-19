@@ -8,8 +8,9 @@ export const BlockContainer = styled(Grid)`
   min-height: 92.2vh;
   margin-top: 5vh;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     flex-direction: column-reverse;
+    margin-top: 0;
   }
 
   @media (max-width: 400px) and (max-height: 800px) {
@@ -42,9 +43,9 @@ export const LeftGrid = styled(Grid)`
   & > div {
     padding: 0 12rem;
 
-    @media (max-width: 768px) {
-      padding: 0;
-      margin: auto;
+    @media (max-width: 900px) {
+      padding: 0 10rem;
+      /* margin: auto; */
       margin-top: 1.7rem;
     }
 
