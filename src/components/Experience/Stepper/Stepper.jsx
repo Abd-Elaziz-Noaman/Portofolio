@@ -32,7 +32,13 @@ export default function Stepper({ steps }) {
           </LabelContainer> */}
           <DescriptionsContainer>
             <SubLabel>{step.subLabel}</SubLabel>
-            <p>{step.description}</p>
+            <ul style={{ marginLeft: "15px", marginTop: "15px" }}>
+              {step.description.map((ele, index) => (
+                <li key={index} style={{ marginBottom: "10px" }}>
+                  {ele}
+                </li>
+              ))}
+            </ul>
           </DescriptionsContainer>
           <br />
         </div>

@@ -1,44 +1,54 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import Stepper from "./Stepper/Stepper";
 import { StepperContainer } from "./Experience.styled";
 import { StyledTypography } from "../About/About.styled";
-// import { Box, Stepper, Step, StepLabel } from "@mui/material";
 
-// const steps = [
-//   "Select master blaster campaign settings",
-//   "Create an ad group",
-//   "Create an ad",
-// ];
 let steps = [
   {
+    year: 2020,
+    label: "Frontend Developer",
+    subLabel: "Freelancer. From 2020, present",
+    description: [
+      "Participated in several projects focusing on delivering high quality projects in time.",
+      "Accomplished a Freelancing Platform specialized in Cyber Security.",
+    ],
+  },
+  {
     year: 2021,
-    label: "Front-end Developer",
-    subLabel: `Megadev, Tanta, FullTime. From August 2021, To Aptil 2022`,
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam neque nunc, euismod vitae sagittis ut, efficitur eu lacus. Donec gravida at diam quis fringilla. Nam pretium dapibus pellentesque. Morbi vulputate purus ultrices sem posuere posuere. Maecenas risus arcu, elementum et dignissim in, vestibulum ut nisl. Integer suscipit metus a egestas sagittis. Vestibulum non urna ac eros euismod varius eu et augue.",
+    label: "Frontend Developer",
+    subLabel: `Megadev, Tanta, Egypt, FullTime. From August 2021, To Aptil 2022`,
+    description: [
+      "Participated in several projects, the most important was an medicine market app for warehouses.",
+      "Accomplished several landing pages.",
+    ],
   },
   {
     year: 2022,
-    label: "Front-end Developer",
+    label: "Frontend Developer",
     subLabel:
       "Sourcya, (Alexandria - Sweden), PartTime Remote. From february 2022, To May 2022",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam neque nunc, euismod vitae sagittis ut, efficitur eu lacus. Donec gravida at diam quis fringilla. Nam pretium dapibus pellentesque. Morbi vulputate purus ultrices sem posuere posuere. Maecenas risus arcu, elementum et dignissim in, vestibulum ut nisl. Integer suscipit metus a egestas sagittis. Vestibulum non urna ac eros euismod varius eu et augue.",
-  },
-  {
-    year: 2023,
-    label: "Front-end Developer",
-    subLabel: "Freelancer. From 2020, present",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam neque nunc, euismod vitae sagittis ut, efficitur eu lacus. Donec gravida at diam quis fringilla. Nam pretium dapibus pellentesque. Morbi vulputate purus ultrices sem posuere posuere. Maecenas risus arcu, elementum et dignissim in, vestibulum ut nisl. Integer suscipit metus a egestas sagittis. Vestibulum non urna ac eros euismod varius eu et augue.",
+    description: [
+      "Participated in 80 – 85% of [ Fastore Orders ] App, it’s a dashboard to manage orders and doing some calculations.",
+      "Contributed to [ Cisozen ] App, it’s an Australian cyber security startup, Website has tests, dashboard and recommendations.",
+    ],
   },
   {
     year: 2023,
     label: "First Lieutenant Rserve Officer (Software Developer)",
     subLabel: "Egyptian Armed Forces. From May 2022, present",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam neque nunc, euismod vitae sagittis ut, efficitur eu lacus. Donec gravida at diam quis fringilla. Nam pretium dapibus pellentesque. Morbi vulputate purus ultrices sem posuere posuere. Maecenas risus arcu, elementum et dignissim in, vestibulum ut nisl. Integer suscipit metus a egestas sagittis. Vestibulum non urna ac eros euismod varius eu et augue.",
+    description: [
+      "Working on ERP systems and generating reports.",
+      "Participated in Air defense forces main website.",
+      "Participated in Technical support app.",
+    ],
+  },
+  {
+    year: 2024,
+    label: "Frontend Engineer",
+    subLabel:
+      "STORYME, Ramallah, West Bank, FullTime Remote. From April 2024, present",
+    description: [],
   },
 ];
 
