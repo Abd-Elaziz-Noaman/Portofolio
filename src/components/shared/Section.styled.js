@@ -24,13 +24,13 @@ export const SectionTitle = styled(Typography).withConfig({
     theme.palette.mode == "light"
       ? theme.palette.primary.dark
       : theme.palette.primary.light};
-  margin: 0 0 1.5rem;
+  margin: 0;
   line-height: 1.2;
   font-weight: 500;
+  text-align: left;
 
   @media (max-width: 678px) {
     font-size: 2.2rem;
-    margin-bottom: 1.15rem;
   }
 `;
 
@@ -38,7 +38,7 @@ export const AccentRule = styled.div`
   width: 4.5rem;
   height: 4px;
   background: ${({ theme }) => theme.palette.accent.main};
-  margin-bottom: 1.25rem;
+  margin: 0;
   border-radius: 999px;
 `;
 

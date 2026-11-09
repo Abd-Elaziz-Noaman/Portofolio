@@ -15,7 +15,7 @@ import {
   StyledLink,
   ContactList,
   ContactBlock,
-  ContaxtText,
+  ContactText,
 } from "./Contact.styled";
 
 export default function Contact() {
@@ -25,18 +25,18 @@ export default function Contact() {
       <ContactList>
         <ContactBlock href="mailto:abdelaziz.noaman19@gmail.com">
           <EmailIcon fontSize="medium" />
-          <ContaxtText>abdelaziz.noaman19@gmail.com</ContaxtText>
+          <ContactText>abdelaziz.noaman19@gmail.com</ContactText>
         </ContactBlock>
         <ContactBlock href="tel:+201006831361">
           <PhoneIcon fontSize="medium" />
-          <ContaxtText>(+20) 01006831361</ContaxtText>
+          <ContactText>(+20) 01006831361</ContactText>
         </ContactBlock>
         <ContactBlock
           href="https://www.google.com/maps/search/?api=1&query=Cairo%2C%20Egypt"
           target="_blank"
         >
           <RoomIcon fontSize="medium" />
-          <ContaxtText>Cairo, Egypt</ContaxtText>
+          <ContactText>Cairo, Egypt</ContactText>
         </ContactBlock>
       </ContactList>
       <SocialIconsContainer>

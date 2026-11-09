@@ -10,36 +10,23 @@ import Redux from "public/images/skills/redux.webp";
 import ReactNative from "public/images/skills/react-native.webp";
 import Git from "public/images/skills/git.webp";
 import GridDrawer from "./GridDrawer/GridDrawer";
-import {
-  SectionShell,
-  SectionTitle,
-  AccentRule,
-  BodyText,
-} from "../shared/Section.styled";
-import { SkillsWrap, SubSection } from "./About.styled";
+import { SectionShell, BodyText } from "../shared/Section.styled";
+import SectionHeading from "../shared/SectionHeading";
+import { SubSection } from "./About.styled";
 
-const SkillsGrid_1 = [
+const skills = [
   { title: "JavaScript", image: JavaScript },
   { title: "TypeScript", image: "/images/skills/typescript.svg" },
   { title: "HTML & CSS", image: HtmlCss },
   { title: "Node.js", image: "/images/skills/nodedotjs.svg" },
-];
-
-const SkillsGrid_2 = [
   { title: "React", image: ReactJs },
   { title: "Next.js", image: "/images/skills/nextdotjs.svg" },
   { title: "React Query", image: "/images/skills/reactquery.svg" },
   { title: "Tailwind CSS", image: "/images/skills/tailwindcss.svg" },
-];
-
-const SkillsGrid_3 = [
   { title: "Redux Toolkit", image: Redux },
   { title: "Zustand", image: "/images/skills/zustand.svg" },
   { title: "Material UI", image: MaterialUI },
   { title: "Ant Design", image: AntD },
-];
-
-const SkillsGrid_4 = [
   { title: "Styled Components", image: StyledComponents },
   { title: "Git", image: Git },
   { title: "Firebase", image: "/images/skills/firebase.svg" },
@@ -50,10 +37,7 @@ export default function About() {
   return (
     <SectionShell id="About">
       <SubSection>
-        <SectionTitle variant="h2" component="h2" header>
-          About
-        </SectionTitle>
-        <AccentRule />
+        <SectionHeading>About</SectionHeading>
         <BodyText variant="h6" component="p">
           Software Engineer with 4+ years of experience building scalable web
           applications. Frontend-focused with React, Next.js, and TypeScript,
@@ -68,10 +52,7 @@ export default function About() {
       </SubSection>
 
       <SubSection>
-        <SectionTitle variant="h2" component="h2" header>
-          Education
-        </SectionTitle>
-        <AccentRule />
+        <SectionHeading>Education</SectionHeading>
         <BodyText variant="h6" component="p">
           B.S. in Computer Engineering and Automatic Control — University of
           Tanta, Egypt, 2021. Total grade: Good. Graduation project grade:
@@ -80,49 +61,15 @@ export default function About() {
       </SubSection>
 
       <SubSection>
-        <SectionTitle
-          variant="h2"
-          component="h2"
-          align="center"
-          header
-          sx={{ textAlign: "center" }}
-        >
-          My Skills
-        </SectionTitle>
-        <SkillsWrap>
-          <GridDrawer
-            content={SkillsGrid_1}
-            spacing={2}
-            lg={3}
-            md={3}
-            sm={6}
-            xs={6}
-          />
-          <GridDrawer
-            content={SkillsGrid_2}
-            spacing={2}
-            lg={3}
-            md={3}
-            sm={6}
-            xs={6}
-          />
-          <GridDrawer
-            content={SkillsGrid_3}
-            spacing={2}
-            lg={3}
-            md={3}
-            sm={6}
-            xs={6}
-          />
-          <GridDrawer
-            content={SkillsGrid_4}
-            spacing={2}
-            lg={3}
-            md={3}
-            sm={6}
-            xs={6}
-          />
-        </SkillsWrap>
+        <SectionHeading>My Skills</SectionHeading>
+        <GridDrawer
+          content={skills}
+          spacing={2}
+          lg={3}
+          md={3}
+          sm={6}
+          xs={6}
+        />
       </SubSection>
     </SectionShell>
   );

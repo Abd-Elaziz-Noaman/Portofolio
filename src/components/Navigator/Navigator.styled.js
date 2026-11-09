@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Box, AppBar, MenuItem, Button } from "@mui/material";
+import { Box, AppBar, Button } from "@mui/material";
 
 export const ModeIconContainer = styled(Box)`
   display: flex;
@@ -43,12 +43,6 @@ export const StyledAppBar = styled(AppBar)`
     @media (max-width: 400px) and (max-height: 800px) {
       height: 8.2vh;
     }
-  }
-`;
-
-export const StyledMenuItem = styled(MenuItem)`
-  &.MuiBox-root.MuiButtonBase-root.MuiButton-root {
-    color: black;
   }
 `;
 

@@ -70,11 +70,19 @@ export const ContactBlock = styled(Link)`
   border: 1.5px solid ${({ theme }) => theme.palette.accent.border};
   box-shadow: ${({ theme }) =>
     theme.palette.mode == "light" ? "0 2px 6px rgba(28, 25, 23, 0.07)" : "none"};
+  text-decoration: none;
   transition: background-color 0.25s ease, border-color 0.25s ease;
 
   svg {
     color: ${({ theme }) => theme.palette.accent.text};
     flex-shrink: 0;
+  }
+
+  &:hover,
+  &:focus,
+  &:visited {
+    text-decoration: none;
+    color: ${({ theme }) => theme.palette.accent.text};
   }
 
   &:hover {
@@ -84,12 +92,13 @@ export const ContactBlock = styled(Link)`
   }
 `;
 
-export const ContaxtText = styled.p`
+export const ContactText = styled.p`
   font-size: 1.08rem;
   color: ${({ theme }) => theme.palette.accent.text};
   letter-spacing: 0.35px;
   margin: 0;
   font-weight: 600;
+  text-decoration: none;
 
   @media (max-width: 500px) {
     font-size: 0.95rem;

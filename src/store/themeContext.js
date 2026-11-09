@@ -1,11 +1,7 @@
 import React, { useState } from "react";
-import { createTheme } from "@mui/material/styles";
+import { createTheme, ThemeProvider as MuiThemeProvider } from "@mui/material/styles";
 import { ThemeProvider } from "styled-components";
-import { ThemeProvider as MuiThemeProvider } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
 import CssBaseline from "@mui/material/CssBaseline";
-
-// const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
 
 const ThemeContext = React.createContext({
   mode: "",
@@ -13,85 +9,34 @@ const ThemeContext = React.createContext({
   theme: null,
 });
 
-// export const darkTheme = createTheme({
-//   palette: {
-//     mode: prefersDarkMode ? "dark" : "light",
-//   },
-// });
-
-// const getDesignTokens = (mode) => ({
-//   palette: {
-//     mode,
-//     ...(mode === "light"
-//       ? {
-//           // palette values for light mode
-//           primary: amber,
-//           divider: amber[200],
-//           text: {
-//             primary: grey[900],
-//             secondary: grey[800],
-//           },
-//         }
-//       : {
-//           // palette values for dark mode
-//           primary: deepOrange,
-//           divider: deepOrange[700],
-//           background: {
-//             default: deepOrange[900],
-//             paper: deepOrange[900],
-//           },
-//           text: {
-//             primary: "#fff",
-//             secondary: grey[500],
-//           },
-//         }),
-//   },
-// });
-
-export const ThemeContextProvider = (props) => {
-  // const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
-  // console.log(
-  //   "🚀 ~ file: themeContext.js:53 ~ ThemeContextProvider ~ prefersDarkMode:",
-  //   prefersDarkMode
-  // );
-
-  let intialMode = "dark";
+function readStoredMode() {
   try {
     if (typeof window !== "undefined") {
-      intialMode = window.localStorage.getItem("mode") || "dark";
-      console.log("All Works fine!");
+      return window.localStorage.getItem("mode") || "dark";
     }
-  } catch (err) {
-    console.log("localStorage is not available.");
+  } catch {
+    // localStorage unavailable
   }
+  return "dark";
+}
 
-  console.log(
-    "🚀 ~ file: themeContext.js:59 ~ ThemeContextProvider ~ intialMode:",
-    intialMode
-  );
-
-  const [mode, setMode] = useState(intialMode);
-
-  const toggleModeHandler = () => {
-    if (mode === "dark") {
-      try {
-        if (typeof window !== "undefined") {
-          window.localStorage.setItem("mode", "light");
-        }
-      } catch (err) {
-        console.log("localStorage is not available.");
-      }
-      setMode("light");
-    } else {
-      try {
-        if (typeof window !== "undefined") {
-          window.localStorage.setItem("mode", "dark");
-        }
-      } catch (err) {
-        console.log("localStorage is notavailable.");
-      }
-      setMode("dark");
+function writeStoredMode(nextMode) {
+  try {
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem("mode", nextMode);
     }
+  } catch {
+    // localStorage unavailable
+  }
+}
+
+export const ThemeContextProvider = ({ children }) => {
+  const [mode, setMode] = useState(readStoredMode);
+
+  const toggleMode = () => {
+    const nextMode = mode === "dark" ? "light" : "dark";
+    writeStoredMode(nextMode);
+    setMode(nextMode);
   };
 
   const isLight = mode === "light";
@@ -126,68 +71,14 @@ export const ThemeContextProvider = (props) => {
     },
   });
 
-  // const theme = React.useMemo(
-  //   () =>
-  //     createTheme({
-  //       // vars: {
-  //       //   primary: "#EF14E2",
-  //       //   theme: "#96248E",
-  //       //   secondary: "#96248e",
-  //       // },
-  //       palette: {
-  //         mode,
-  //         ...(mode === "light"
-  //           ? {
-  //               // palette values for light mode
-  //               primary: { main: "#fff" },
-  //               divider: "#fff"[200],
-  //               text: {
-  //                 primary: "#34353A"[900],
-  //                 secondary: "#34353A"[800],
-  //               },
-  //             }
-  //           : {
-  //               // palette values for dark mode
-  //               primary: { main: "#34353A" },
-  //               // divider: "#34353A"[700],
-  //               background: {
-  //                 default: "#34353A"[900],
-  //                 paper: "#34353A"[900],
-  //               },
-  //               text: {
-  //                 primary: "#fff",
-  //                 secondary: "grey"[500],
-  //               },
-  //             }),
-  //       },
-  //       boxShadow: {
-  //         shadows:
-  //           mode === "dark"
-  //             ? "0px -2px 4px rgb(0 0 0 / 25%)"
-  //             : "0px 4px 4px rgb(70 161 27 / 25%)",
-  //       },
-  //     }),
-  //   [mode]
-  // );
-
-  const contextValue = {
-    mode: mode,
-    toggleMode: toggleModeHandler,
-    theme: theme,
-  };
-
   return (
-    <ThemeContext.Provider value={contextValue}>
-      <MuiThemeProvider theme={contextValue.theme}>
+    <ThemeContext.Provider value={{ mode, toggleMode, theme }}>
+      <MuiThemeProvider theme={theme}>
         <CssBaseline />
-        <ThemeProvider theme={contextValue.theme}>
-          {props.children}
-        </ThemeProvider>
+        <ThemeProvider theme={theme}>{children}</ThemeProvider>
       </MuiThemeProvider>
     </ThemeContext.Provider>
   );
 };
-
-// export const theme = createTheme(getDesignTokens("dark"));
 
 export default ThemeContext;

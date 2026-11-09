@@ -1,24 +1,16 @@
 import React, { useState, useContext } from "react";
 import {
-  AppBar,
   Box,
   Toolbar,
   IconButton,
   Typography,
   Menu,
   Container,
-  Avatar,
-  Button,
-  Tooltip,
   MenuItem,
 } from "@mui/material";
 import { useTheme } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import AdbIcon from "@mui/icons-material/Adb";
 import LightModeIcon from "@mui/icons-material/LightMode";
-import ModeNightIcon from "@mui/icons-material/ModeNight";
-import NightsStayIcon from "@mui/icons-material/NightsStay";
-import Brightness4Icon from "@mui/icons-material/Brightness4";
 import NightlightIcon from "@mui/icons-material/Nightlight";
 import Image from "next/image";
 import Logo from "public/images/code-logo.webp";
@@ -26,7 +18,6 @@ import ThemeContext from "../../store/themeContext";
 import {
   ModeIconContainer,
   StyledAppBar,
-  StyledMenuItem,
   StyledButton,
   NavButtonsContainer,
   LogoWrap,
@@ -35,28 +26,20 @@ import {
 const pages = ["Home", "About", "Experience", "Contact"];
 
 export default function Navigator() {
-  const { mode, toggleMode } = useContext(ThemeContext);
+  const { toggleMode } = useContext(ThemeContext);
   const theme = useTheme();
-
   const [anchorElNav, setAnchorElNav] = useState(null);
-  // const [anchorElUser, setAnchorElUser] = useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  // const handleOpenUserMenu = (event) => {
-  //   setAnchorElUser(event.currentTarget);
-  // };
 
   const handleCloseNavMenu = (blockId) => {
     setAnchorElNav(null);
     const targetDiv = document.getElementById(blockId);
-    targetDiv.scrollIntoView({ behavior: "smooth" });
+    targetDiv?.scrollIntoView({ behavior: "smooth" });
   };
 
-  // const handleCloseUserMenu = () => {
-  //   setAnchorElUser(null);
-  // };
   return (
     <StyledAppBar position="fixed" theme={theme}>
       <Container maxWidth="xl">
@@ -80,7 +63,7 @@ export default function Navigator() {
           >
             <IconButton
               size="large"
-              aria-label="account of current user"
+              aria-label="open navigation menu"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
@@ -102,18 +85,13 @@ export default function Navigator() {
                 horizontal: "left",
               }}
               open={Boolean(anchorElNav)}
-              // onClose={handleCloseNavMenu}
               onClose={() => setAnchorElNav(null)}
               sx={{
                 display: { xs: "block", md: "none" },
               }}
             >
               {pages.map((page) => (
-                <MenuItem
-                  key={page}
-                  onClick={() => handleCloseNavMenu(page)}
-                  // sx={{ color: "black" }}
-                >
+                <MenuItem key={page} onClick={() => handleCloseNavMenu(page)}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
