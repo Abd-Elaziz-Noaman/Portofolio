@@ -70,13 +70,25 @@ export const Name = styled.p`
     font-size: 1.35rem;
   }
 
-  & > span {
+  .accent {
     font-size: 1.95rem;
     font-weight: 700;
     color: ${({ theme }) => theme.palette.accent.text};
 
     @media (max-width: 678px) {
       font-size: 1.45rem;
+    }
+  }
+
+  .typed-cursor {
+    font-weight: 400;
+    color: ${({ theme }) => theme.palette.accent.text};
+    animation: typedBlink 0.7s step-end infinite;
+  }
+
+  @keyframes typedBlink {
+    50% {
+      opacity: 0;
     }
   }
 `;

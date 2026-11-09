@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { createTheme, ThemeProvider as MuiThemeProvider } from "@mui/material/styles";
 import { ThemeProvider } from "styled-components";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -33,46 +33,61 @@ function writeStoredMode(nextMode) {
 export const ThemeContextProvider = ({ children }) => {
   const [mode, setMode] = useState(readStoredMode);
 
-  const toggleMode = () => {
-    const nextMode = mode === "dark" ? "light" : "dark";
-    writeStoredMode(nextMode);
-    setMode(nextMode);
-  };
+  const toggleMode = useCallback(() => {
+    setMode((current) => {
+      const nextMode = current === "dark" ? "light" : "dark";
+      writeStoredMode(nextMode);
+      return nextMode;
+    });
+  }, []);
 
   const isLight = mode === "light";
 
-  const theme = createTheme({
-    palette: {
-      mode,
-      background: {
-        default: isLight ? "#F4F4F5" : "#34353A",
-        paper: isLight ? "#FFFFFF" : "#3d3e42",
-      },
-      primary: {
-        main: isLight ? "#1C1917" : "#ffc86b",
-        dark: isLight ? "#1C1917" : "#34353A",
-        light: isLight ? "#F4F4F5" : "#F5F5F4",
-      },
-      secondary: {
-        main: isLight ? "#44403C" : "#ffc86b",
-        dark: isLight ? "#E7E5E4" : "#3d3e42",
-        light: isLight ? "#FFFFFF" : "#f3f3f2",
-      },
-      text: {
-        primary: isLight ? "#1C1917" : "#F5F5F4",
-        secondary: isLight ? "#57534E" : "#D6D3D1",
-      },
-      accent: {
-        main: "#ffc86b",
-        text: isLight ? "#8B5A00" : "#ffc86b",
-        soft: isLight ? "rgba(139, 90, 0, 0.12)" : "rgba(255, 200, 107, 0.16)",
-        border: isLight ? "rgba(139, 90, 0, 0.28)" : "rgba(255, 200, 107, 0.3)",
-      },
-    },
-  });
+  const theme = useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode,
+          background: {
+            default: isLight ? "#F4F4F5" : "#34353A",
+            paper: isLight ? "#FFFFFF" : "#3d3e42",
+          },
+          primary: {
+            main: isLight ? "#1C1917" : "#ffc86b",
+            dark: isLight ? "#1C1917" : "#34353A",
+            light: isLight ? "#F4F4F5" : "#F5F5F4",
+          },
+          secondary: {
+            main: isLight ? "#44403C" : "#ffc86b",
+            dark: isLight ? "#E7E5E4" : "#3d3e42",
+            light: isLight ? "#FFFFFF" : "#f3f3f2",
+          },
+          text: {
+            primary: isLight ? "#1C1917" : "#F5F5F4",
+            secondary: isLight ? "#57534E" : "#D6D3D1",
+          },
+          accent: {
+            main: "#ffc86b",
+            text: isLight ? "#8B5A00" : "#ffc86b",
+            soft: isLight
+              ? "rgba(139, 90, 0, 0.12)"
+              : "rgba(255, 200, 107, 0.16)",
+            border: isLight
+              ? "rgba(139, 90, 0, 0.28)"
+              : "rgba(255, 200, 107, 0.3)",
+          },
+        },
+      }),
+    [isLight, mode]
+  );
+
+  const contextValue = useMemo(
+    () => ({ mode, toggleMode, theme }),
+    [mode, theme, toggleMode]
+  );
 
   return (
-    <ThemeContext.Provider value={{ mode, toggleMode, theme }}>
+    <ThemeContext.Provider value={contextValue}>
       <MuiThemeProvider theme={theme}>
         <CssBaseline />
         <ThemeProvider theme={theme}>{children}</ThemeProvider>

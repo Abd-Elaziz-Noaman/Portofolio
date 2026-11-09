@@ -37,24 +37,24 @@ export const YearBlock = styled.div`
   /* Arrow tip on the right, pointing toward the timeline dot */
   clip-path: polygon(
     0 0,
-    calc(100% - 12px) 0,
+    calc(100% - 20px) 0,
     100% 50%,
-    calc(100% - 12px) 100%,
+    calc(100% - 20px) 100%,
     0 100%
   );
-  padding-right: 0.45rem;
+  padding-right: 0.7rem;
 
   @media (max-width: 700px) {
     height: 34px;
     font-size: 0.82rem;
     clip-path: polygon(
       0 0,
-      calc(100% - 9px) 0,
+      calc(100% - 14px) 0,
       100% 50%,
-      calc(100% - 9px) 100%,
+      calc(100% - 14px) 100%,
       0 100%
     );
-    padding-right: 0.3rem;
+    padding-right: 0.5rem;
   }
 `;
 export const Rail = styled.div`
