@@ -1,11 +1,6 @@
 import "./globals.css";
-import { Inter, Roboto } from "next/font/google";
-import clsx from "clsx";
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
+import { Roboto } from "next/font/google";
+import StyledComponentsRegistry from "@/lib/registry";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -13,14 +8,17 @@ const roboto = Roboto({
 });
 
 export const metadata = {
-  title: "Abd EL-Aziz Noaman",
-  description: "This is Abd El-Aziz Noaman's Protfolio, Take a look?",
+  title: "Abd El-Aziz Noaman — Software Engineer",
+  description:
+    "Software Engineer with 4+ years building scalable web apps with React, Next.js, and TypeScript.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <body className={roboto.className}>
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+      </body>
     </html>
   );
 }

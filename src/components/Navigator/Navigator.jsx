@@ -29,10 +29,10 @@ import {
   StyledMenuItem,
   StyledButton,
   NavButtonsContainer,
+  LogoWrap,
 } from "./Navigator.styled";
 
-const pages = ["Home", "About", "Projects", "Experience", "Contact"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const pages = ["Home", "About", "Experience", "Contact"];
 
 export default function Navigator() {
   const { mode, toggleMode } = useContext(ThemeContext);
@@ -61,13 +61,16 @@ export default function Navigator() {
     <StyledAppBar position="fixed" theme={theme}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Image
-            alt="logo"
-            src={Logo}
-            width={90}
-            height={60}
-            sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
-          />
+          <LogoWrap>
+            <Image
+              alt="logo"
+              src={Logo}
+              width={72}
+              height={52}
+              style={{ display: "block" }}
+              priority
+            />
+          </LogoWrap>
 
           <Box
             sx={{

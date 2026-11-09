@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img">
+  <title>Zustand</title>
+  <rect width="128" height="128" rx="28" fill="#3D3631"/>
+  <circle cx="36" cy="34" r="20" fill="#F6D7A7"/>
+  <circle cx="92" cy="34" r="20" fill="#F6D7A7"/>
+  <circle cx="36" cy="34" r="11" fill="#3D3631"/>
+  <circle cx="92" cy="34" r="11" fill="#3D3631"/>
+  <ellipse cx="64" cy="74" rx="44" ry="40" fill="#F6D7A7"/>
+  <circle cx="48" cy="64" r="7" fill="#3D3631"/>
+  <circle cx="80" cy="64" r="7" fill="#3D3631"/>
+  <ellipse cx="64" cy="74" rx="8" ry="6" fill="#E39B6B"/>
+  <ellipse cx="64" cy="92" rx="16" ry="12" fill="#3D3631"/>
+</svg>

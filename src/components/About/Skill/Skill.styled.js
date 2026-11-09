@@ -3,13 +3,14 @@ import Image from "next/image";
 import { Box } from "@mui/material";
 
 export const SkillBlock = styled(Box)`
-  height: 230px;
-  width: 90%;
-  margin: auto;
+  height: 190px;
+  width: 100%;
+  margin: 0.75rem auto 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  gap: 0.75rem;
   text-align: center;
   background-color: ${({ theme }) =>
     theme.palette.mode == "light"
@@ -17,38 +18,56 @@ export const SkillBlock = styled(Box)`
       : theme.palette.secondary.dark};
   color: ${({ theme }) =>
     theme.palette.mode == "light"
-      ? theme.palette.secondary.dark
+      ? theme.palette.primary.dark
       : theme.palette.secondary.light};
   box-shadow: ${({ theme }) =>
-    theme.palette.mode == "light" ? "5px 5px 10px rgba(0,0,0,0.2)" : "none"};
-  margin-top: 1.5rem;
-  border-radius: 0.5rem;
+    theme.palette.mode == "light" ? "0 2px 8px rgba(28, 25, 23, 0.08)" : "none"};
+  border-radius: 0.75rem;
+  border: 1px solid
+    ${({ theme }) =>
+      theme.palette.mode == "light"
+        ? theme.palette.accent.border
+        : "rgba(255, 200, 107, 0.08)"};
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
+  transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+  padding: 1rem 0.75rem;
 
   @media (max-width: 400px) {
-    height: 150px;
+    height: 145px;
+    gap: 0.5rem;
   }
 
   &:hover {
-    background-color: #ffc86b;
-    transform: translateY(-8px);
+    background-color: ${({ theme }) => theme.palette.accent.main};
+    transform: translateY(-6px);
+    color: #1c1917;
   }
 `;
 
 export const ImageContainer = styled.div`
-  height: 100px;
-  width: 100px;
-  position: relative;
+  height: 72px;
+  width: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
 
   @media (max-width: 400px) {
-    height: 50px;
-    width: 50px;
+    height: 48px;
+    width: 48px;
   }
 `;
 
 export const SkillImage = styled(Image)`
-  /* border-radius: 50%; */
-  // position: absolute;
-  object-fit: cover;
+  width: 72px !important;
+  height: 72px !important;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain !important;
+
+  @media (max-width: 400px) {
+    width: 48px !important;
+    height: 48px !important;
+  }
 `;

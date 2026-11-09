@@ -15,16 +15,19 @@ export default function Home() {
     <ThemeContextProvider>
       <CssBaseline />
       <Head>
-        <title>Abd El-Aziz Noaman - Portfolio</title>
+        <title>Abd El-Aziz Noaman — Software Engineer</title>
         <meta
           name="description"
-          content="Welcome to Abd El-Aziz Noaman's portfolio. Take a look?"
+          content="Software Engineer with 4+ years building scalable web apps with React, Next.js, and TypeScript."
         />
 
-        <meta property="og:title" content="Abd El-Aziz Noaman - Portfolio" />
+        <meta
+          property="og:title"
+          content="Abd El-Aziz Noaman — Software Engineer"
+        />
         <meta
           property="og:description"
-          content="Welcome to Abd El-Aziz Noaman's portfolio. Take a look?"
+          content="Software Engineer with 4+ years building scalable web apps with React, Next.js, and TypeScript."
         />
         <meta
           property="og:image"
@@ -37,10 +40,13 @@ export default function Home() {
         <meta property="og:type" content="website" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Abd El-Aziz Noaman - Portfolio" />
+        <meta
+          name="twitter:title"
+          content="Abd El-Aziz Noaman — Software Engineer"
+        />
         <meta
           name="twitter:description"
-          content="Welcome to Abd El-Aziz Noaman's portfolio. Take a look?"
+          content="Software Engineer with 4+ years building scalable web apps with React, Next.js, and TypeScript."
         />
         <meta
           name="twitter:image"

@@ -62,7 +62,30 @@ export const StyledButton = styled(Button)`
       theme.palette.mode == "light"
         ? theme.palette.primary.dark
         : theme.palette.primary.light};
-    margin: 1rem 2rem;
+    margin: 0.85rem 1.25rem;
     font-weight: bold;
+    letter-spacing: 0.4px;
+  }
+`;
+
+export const LogoWrap = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: 0.75rem;
+  border-radius: 0.65rem;
+  overflow: hidden;
+  background: ${({ theme }) =>
+    theme.palette.mode == "light" ? "#FFFFFF" : "rgba(255,255,255,0.04)"};
+  border: 1px solid ${({ theme }) => theme.palette.accent.border};
+  padding: 0.15rem 0.35rem;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+
+  &:hover {
+    border-color: ${({ theme }) => theme.palette.accent.main};
+    transform: translateY(-1px);
+  }
+
+  img {
+    object-fit: contain !important;
   }
 `;

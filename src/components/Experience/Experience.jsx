@@ -1,54 +1,88 @@
 import React from "react";
-import { Box } from "@mui/material";
 import Stepper from "./Stepper/Stepper";
-import { StepperContainer } from "./Experience.styled";
-import { StyledTypography } from "../About/About.styled";
+import {
+  SectionShell,
+  SectionTitle,
+} from "../shared/Section.styled";
 
 let steps = [
   {
     year: 2020,
-    label: "Frontend Developer",
-    subLabel: "Freelancer. From 2020, present",
+    label: "Frontend Engineer",
+    subLabel: "Freelancer",
     description: [
-      "Participated in several projects focusing on delivering high quality projects in time.",
-      "Accomplished a Freelancing Platform specialized in Cyber Security.",
+      "Delivered multiple freelance projects on time with a focus on quality.",
+      "Built a freelancing platform specialized in cybersecurity.",
     ],
   },
   {
     year: 2021,
-    label: "Frontend Developer",
-    subLabel: `Megadev, Tanta, Egypt, FullTime. From August 2021, To Aptil 2022`,
+    label: "Frontend Engineer",
+    subLabel:
+      "Megadev, Tanta, Egypt, Full-time. From August 2021 to April 2022",
     description: [
-      "Participated in several projects, the most important was an medicine market app for warehouses.",
-      "Accomplished several landing pages.",
+      "Developed a medicine market e-commerce platform for warehouses, with real-time inventory management and daily price lists.",
+      "Built several landing pages.",
     ],
   },
   {
     year: 2022,
-    label: "Frontend Developer",
+    label: "Frontend Engineer",
     subLabel:
-      "Sourcya, (Alexandria - Sweden), PartTime Remote. From february 2022, To May 2022",
+      "Sourcya, Sweden–Egypt, Alexandria, Part-time Remote. From February 2022 to May 2022",
     description: [
-      "Participated in 80 – 85% of [ Fastore Orders ] App, it’s a dashboard to manage orders and doing some calculations.",
-      "Contributed to [ Cisozen ] App, it’s an Australian cyber security startup, Website has tests, dashboard and recommendations.",
+      "Developed Fastore Orders, a dashboard for order management and calculations.",
+      "Built features for Cisozen, a cybersecurity product with tests, dashboards, and recommendations.",
     ],
   },
   {
-    year: 2023,
-    label: "First Lieutenant Rserve Officer (Software Developer)",
-    subLabel: "Egyptian Armed Forces. From May 2022, present",
+    year: 2022,
+    label: "Reserve Officer (Software Engineer)",
+    subLabel:
+      "Egyptian Armed Forces, Full-time. From May 2022 to April 2024",
     description: [
-      "Working on ERP systems and generating reports.",
-      "Participated in Air defense forces main website.",
-      "Participated in Technical support app.",
+      "Worked on ERP systems and report generation.",
+      "Developed new features and enhancements for the Air Defense Forces main website.",
+      "Maintained and enhanced a membership app for El-Nozha Air Defense House covering memberships, activities, and garage management.",
+      "Led a team of 3 engineers to build a technical support app serving the whole region.",
+      "Migrated apps and databases from local hosting to virtual machines in a larger ecosystem.",
+    ],
+  },
+  {
+    year: 2024,
+    label: "Software Engineer",
+    subLabel:
+      "STORYME, Ramallah, West Bank, Full-time Remote. From April 2024 to November 2024",
+    description: [
+      "Developed and delivered key features for a free editor app.",
+      "Contributed to storytelling projects with animated visuals and sound.",
     ],
   },
   {
     year: 2024,
     label: "Frontend Engineer",
     subLabel:
-      "STORYME, Ramallah, West Bank, FullTime Remote. From April 2024, present",
-    description: [],
+      "CEQUENS, UAE–Egypt, Cairo, Full-time Remote. From November 2024 to April 2025",
+    description: [
+      "Worked across several squads, mainly in the Console squad on the core end-user product, contributing to feature development and a UI refactor that improved code quality and performance.",
+      "Maintained legacy features and implemented new functionality in an internal application used by the operations team.",
+      "Contributed to the early-stage development of a new product during its initialization phase.",
+    ],
+  },
+  {
+    year: 2025,
+    label: "Software Engineer",
+    subLabel:
+      "MisMar, Riyadh, Saudi Arabia, Full-time Remote. From April 2025 to Present",
+    description: [
+      "Developed complex features that improved system stability and scalability.",
+      "Refactored high-impact areas to improve maintainability, performance, and code quality.",
+      "Reduced total Firebase cloud database costs by 85%–90%.",
+      "Decreased Firebase read operations by 90% and write operations by 40%.",
+      "Minimized application memory footprint, CPU usage, and network overhead, boosting overall application speed.",
+      "Resolved security vulnerabilities in system dependencies, closing risks across the application.",
+      "Replaced legacy components across feature screens with the shared component layer, improving consistency and making later changes straightforward.",
+    ],
   },
 ];
 
@@ -56,20 +90,11 @@ steps = [...steps].reverse();
 
 export default function Experience() {
   return (
-    <Box id="Experience" sx={{ width: "90%", margin: "auto" }}>
-      <StyledTypography
-        variant="h2"
-        component="h2"
-        mt={2}
-        mb={4}
-        sx={{ fontWeight: "500" }}
-        header
-      >
+    <SectionShell id="Experience">
+      <SectionTitle variant="h2" component="h2" header>
         Experience
-      </StyledTypography>
-      <StepperContainer>
-        <Stepper steps={steps} />
-      </StepperContainer>
-    </Box>
+      </SectionTitle>
+      <Stepper steps={steps} />
+    </SectionShell>
   );
 }

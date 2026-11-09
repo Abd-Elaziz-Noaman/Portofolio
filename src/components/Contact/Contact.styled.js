@@ -1,10 +1,14 @@
 import styled from "styled-components";
 import Link from "next/link";
-import { Grid } from "@mui/material";
 
 export const ContactContainer = styled.div`
-  /* width: 80%;
-  margin: auto; */
+  width: min(1120px, calc(100% - 4rem));
+  margin: 4.5rem auto 2rem;
+  padding-bottom: 1rem;
+
+  @media (max-width: 768px) {
+    width: calc(100% - 2.5rem);
+  }
 `;
 
 export const Title = styled.h1`
@@ -12,6 +16,7 @@ export const Title = styled.h1`
   text-align: center;
   font-weight: 500;
   letter-spacing: 2px;
+  margin: 0 0 2.25rem;
   color: ${({ theme }) =>
     theme.palette.mode == "light"
       ? theme.palette.primary.dark
@@ -22,117 +27,95 @@ export const Title = styled.h1`
     content: "";
     position: absolute;
     top: 50%;
-    width: 85%;
-    height: 3px;
-    background-color: #ffc86b;
-
-    @media (max-width: 1200px) {
-      width: 75%;
-    }
-
-    @media (max-width: 992px) {
-      width: 70%;
-    }
-
-    @media (max-width: 768px) {
-      width: 60%;
-    }
+    width: min(28%, 200px);
+    height: 2px;
+    background-color: ${({ theme }) => theme.palette.accent.main};
 
     @media (max-width: 576px) {
-      width: 35%;
+      width: 12%;
     }
   }
 
   &::before {
     left: 0;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
   }
 
   &::after {
     right: 0;
-    transform: translate(50%, -50%);
+    transform: translateY(-50%);
   }
 `;
 
-export const SocialIconsContainer = styled(Title)`
+export const ContactList = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-
-  & + & {
-    margin: 100px;
-  }
-`;
-
-export const StyledLink = styled(Link)`
-  margin: 10px;
-  color: ${({ theme }) =>
-    theme.palette.mode == "light"
-      ? theme.palette.primary.dark
-      : theme.palette.primary.light};
-`;
-
-export const ContentContainer = styled(Grid)`
-  width: 60%;
-  margin: auto;
-  padding: 1rem 0;
-
-  @media (max-width: 1200px) {
-    width: 80%;
-  }
-
-  @media (max-width: 768px) {
-    width: 100%;
-  }
-
-  @media (max-width: 590px) {
-    width: 87%;
-  }
-
-  @media (max-width: 400px) {
-    width: 90%;
-  }
+  gap: 1rem;
 `;
 
 export const ContactBlock = styled(Link)`
-  display: flex;
+  display: inline-flex;
   justify-content: flex-start;
   align-items: center;
-  width: 85%;
+  gap: 0.85rem;
+  min-width: min(100%, 24rem);
   background-color: ${({ theme }) =>
     theme.palette.mode == "light"
       ? theme.palette.secondary.light
-      : theme.palette.secondary.dark};
-  color: ${({ theme }) =>
-    theme.palette.mode == "light"
-      ? theme.palette.secondary.dark
-      : theme.palette.secondary.light};
-  padding: 1rem 2rem;
-  border-radius: 0.6rem;
-  filter: brightness(90%);
-  transition: filter 0.5s ease;
+      : "#3f4045"};
+  color: ${({ theme }) => theme.palette.accent.text};
+  padding: 1rem 1.35rem;
+  border-radius: 0.75rem;
+  border: 1.5px solid ${({ theme }) => theme.palette.accent.border};
+  box-shadow: ${({ theme }) =>
+    theme.palette.mode == "light" ? "0 2px 6px rgba(28, 25, 23, 0.07)" : "none"};
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+
+  svg {
+    color: ${({ theme }) => theme.palette.accent.text};
+    flex-shrink: 0;
+  }
 
   &:hover {
-    filter: brightness(100%);
-  }
-
-  @media (max-width: 1200px) {
-    width: 100%;
-  }
-
-  @media (max-width: 400px) {
-    padding: 1rem;
+    background-color: ${({ theme }) =>
+      theme.palette.mode == "light" ? "#FAFAF9" : "#4b4c52"};
+    border-color: ${({ theme }) => theme.palette.accent.main};
   }
 `;
 
 export const ContaxtText = styled.p`
-  font-size: 1.3rem;
-  color: #ffc86b;
-  letter-spacing: 1px;
-  margin-left: 1rem;
+  font-size: 1.08rem;
+  color: ${({ theme }) => theme.palette.accent.text};
+  letter-spacing: 0.35px;
+  margin: 0;
+  font-weight: 600;
 
-  @media (max-width: 400px) {
-    font-size: 1rem;
-    margin-left: 0.4rem;
+  @media (max-width: 500px) {
+    font-size: 0.95rem;
+  }
+`;
+
+export const SocialIconsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 2.25rem 0 0.5rem;
+  flex-wrap: wrap;
+`;
+
+export const StyledLink = styled(Link)`
+  margin: 0.3rem;
+  color: ${({ theme }) =>
+    theme.palette.mode == "light"
+      ? theme.palette.primary.dark
+      : "#f2f2f2"};
+  display: inline-flex;
+  transition: color 0.25s ease, transform 0.25s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    color: ${({ theme }) => theme.palette.accent.text};
   }
 `;

@@ -1,189 +1,133 @@
 import styled from "styled-components";
-import { Grid } from "@mui/material";
 
-export const LabelContainer = styled(Grid)`
-  width: 50%;
+export const Timeline = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`;
 
-  @media (max-width: 992px) {
-    width: 75%;
-  }
+export const TimelineItem = styled.div`
+  display: grid;
+  grid-template-columns: 5.5rem 1.5rem minmax(0, 1fr);
+  column-gap: 1rem;
+  align-items: stretch;
 
-  @media (max-width: 768px) {
-    width: 90%;
-  }
-
-  @media (max-width: 576px) {
-    width: 95%;
-  }
-
-  @media (max-width: 400px) {
-    width: 100%;
+  @media (max-width: 700px) {
+    grid-template-columns: 3.6rem 1.15rem minmax(0, 1fr);
+    column-gap: 0.65rem;
   }
 `;
 
-// export const LabelContainer = styled.div`
-//   width: 150%;
-//   display: flex;
-//   justify-content: flex-start;
-//   align-items: center;
-
-//   /* & + & {
-//     margin-right: 20px;
-//   } */
-//   &:nth-child(1) {
-//     margin-right: 100px;
-//   }
-//   &:nth-child(2) {
-//     margin-right: 100px;
-//   }
-// `;
-
 export const YearBlock = styled.div`
-  position: relative;
-  width: 80px;
-  height: 50px;
+  width: 100%;
+  height: 44px;
   background-color: ${({ theme }) =>
     theme.palette.mode == "light"
-      ? theme.palette.secondary.light
+      ? theme.palette.secondary.dark
       : theme.palette.secondary.dark};
   color: ${({ theme }) =>
     theme.palette.mode == "light"
-      ? theme.palette.secondary.dark
+      ? theme.palette.primary.dark
       : theme.palette.secondary.light};
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
+  border-radius: 0.25rem;
 
-  @media (max-width: 400px) {
-    width: 50px;
+  @media (max-width: 700px) {
     height: 34px;
-    font-size: 0.9rem;
+    font-size: 0.82rem;
   }
+`;
+
+export const Rail = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 0.85rem;
 
   &::before {
     content: "";
     position: absolute;
-    top: 50%;
-    right: -20px;
-    width: 0;
-    height: 0;
-    margin-top: -25px;
-    border-top: 25px solid transparent;
-    border-bottom: 25px solid transparent;
-    border-left: 20px solid
-      ${({ theme }) =>
-        theme.palette.mode == "light"
-          ? theme.palette.secondary.light
-          : theme.palette.secondary.dark};
+    top: 1.4rem;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background: ${({ theme }) =>
+      theme.palette.mode == "light"
+        ? "rgba(139, 90, 0, 0.28)"
+        : "rgba(255, 200, 107, 0.35)"};
+  }
 
-    @media (max-width: 400px) {
-      border-top: 17px solid transparent;
-      border-bottom: 17px solid transparent;
-      margin-top: -17px;
-    }
+  ${TimelineItem}:last-child &::before {
+    display: none;
   }
 `;
 
-export const Circle = styled.div`
-  height: 30px;
-  width: 30px;
-  background-color: #ffc86b;
+export const Dot = styled.div`
+  width: 1.05rem;
+  height: 1.05rem;
   border-radius: 50%;
-  box-shadow: 0px 0px 20px #ffc86b;
+  background-color: ${({ theme }) => theme.palette.accent.main};
+  box-shadow: ${({ theme }) =>
+    theme.palette.mode == "light"
+      ? "0 0 0 3px rgba(139, 90, 0, 0.12)"
+      : "0 0 12px rgba(255, 200, 107, 0.5)"};
+  position: relative;
+  z-index: 1;
+`;
 
-  @media (max-width: 400px) {
-    height: 22px;
-    width: 22px;
-    margin-left: 0.3rem;
+export const Content = styled.div`
+  min-width: 0;
+  padding-bottom: 1.85rem;
+  color: ${({ theme }) =>
+    theme.palette.mode == "light"
+      ? theme.palette.primary.dark
+      : theme.palette.primary.light};
+
+  ul {
+    margin: 0.55rem 0 0;
+    padding-left: 1.15rem;
   }
 
-  @media (max-width: 400px) and (max-height: 800px) {
-    margin-left: -0.3rem;
+  li {
+    margin-bottom: 0.45rem;
+  }
+
+  p {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    opacity: 0.92;
+
+    @media (max-width: 700px) {
+      font-size: 0.95rem;
+    }
   }
 `;
 
 export const Label = styled.h2`
-  width: 50vw;
-  text-align: left;
-  padding-left: 1rem;
-  letter-spacing: 0.8px;
-  color: ${({ theme }) =>
-    theme.palette.mode == "light"
-      ? theme.palette.primary.dark
-      : theme.palette.primary.light};
+  margin: 0.15rem 0 0.4rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
 
-  @media (max-width: 768px) {
-    /* width: 90%; */
-    font-size: 1.2rem;
-    white-space: normal;
-  }
-
-  @media (max-width: 576px) {
-    /* width: 95%; */
-    padding-left: 0;
-    font-size: 0.9rem;
-  }
-`;
-
-export const DescriptionsContainer = styled.div`
-  height: auto;
-  width: 100%;
-  margin: auto;
-  margin-left: 13px;
-  padding-left: 12%;
-  border-left: 5px solid
-    ${({ theme }) =>
-      theme.palette.mode == "light"
-        ? theme.palette.secondary.dark
-        : theme.palette.secondary.light};
-  color: ${({ theme }) =>
-    theme.palette.mode == "light"
-      ? theme.palette.primary.dark
-      : theme.palette.primary.light};
-
-  @media (max-width: 400px) {
-    margin-left: 4px;
-    padding-left: 1.3rem;
-    padding-right: 4.8rem;
-  }
-
-  @media (max-width: 330px) {
-    padding-right: 4.8rem;
-  }
-
-  & p {
-    margin-top: 0.7rem;
-
-    @media (max-width: 992px) {
-      font-size: 1rem;
-    }
-
-    @media (max-width: 576px) {
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 400px) {
-      font-size: 0.7rem;
-    }
+  @media (max-width: 700px) {
+    font-size: 1.1rem;
   }
 `;
 
 export const SubLabel = styled.h3`
-  width: 50vw;
-  white-space: nowrap;
-  margin-top: 0.3rem;
+  margin: 0;
+  font-size: 1.02rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: ${({ theme }) => theme.palette.accent.text};
 
-  @media (max-width: 992px) {
-    white-space: normal;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 1.1rem;
-  }
-
-  @media (max-width: 576px) {
-    font-size: 0.8rem;
+  @media (max-width: 700px) {
+    font-size: 0.95rem;
   }
 `;

@@ -1,5 +1,4 @@
 import React from "react";
-import { Grid } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -14,7 +13,7 @@ import {
   Title,
   SocialIconsContainer,
   StyledLink,
-  ContentContainer,
+  ContactList,
   ContactBlock,
   ContaxtText,
 } from "./Contact.styled";
@@ -23,29 +22,23 @@ export default function Contact() {
   return (
     <ContactContainer id="Contact">
       <Title>Contact Me</Title>
-      <ContentContainer container spacing={2} justifyContent="center">
-        <Grid item lg={6} md={6} sm={8} xs={12}>
-          <ContactBlock href="mailto:zizo.noaman@yahoo.com">
-            <EmailIcon fontSize="large" />
-            <ContaxtText>zezo.noaman@yahoo.com</ContaxtText>
-          </ContactBlock>
-        </Grid>
-        <Grid item lg={6} md={6} sm={8} xs={12}>
-          <ContactBlock href="tel:+201006831361">
-            <PhoneIcon fontSize="large" />
-            <ContaxtText>(+20) 01006831361</ContaxtText>
-          </ContactBlock>
-        </Grid>
-        <Grid item lg={6} md={6} sm={8} xs={12}>
-          <ContactBlock
-            href="https://www.google.com/maps/search/?api=1&query=Egypt"
-            target="_blank"
-          >
-            <RoomIcon fontSize="large" />
-            <ContaxtText>Cairo, Egypt</ContaxtText>
-          </ContactBlock>
-        </Grid>
-      </ContentContainer>
+      <ContactList>
+        <ContactBlock href="mailto:abdelaziz.noaman19@gmail.com">
+          <EmailIcon fontSize="medium" />
+          <ContaxtText>abdelaziz.noaman19@gmail.com</ContaxtText>
+        </ContactBlock>
+        <ContactBlock href="tel:+201006831361">
+          <PhoneIcon fontSize="medium" />
+          <ContaxtText>(+20) 01006831361</ContaxtText>
+        </ContactBlock>
+        <ContactBlock
+          href="https://www.google.com/maps/search/?api=1&query=Cairo%2C%20Egypt"
+          target="_blank"
+        >
+          <RoomIcon fontSize="medium" />
+          <ContaxtText>Cairo, Egypt</ContaxtText>
+        </ContactBlock>
+      </ContactList>
       <SocialIconsContainer>
         <StyledLink href="https://www.facebook.com/zezo.noaman" target="_blank">
           <FacebookIcon
